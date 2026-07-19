@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimBack — Recover What's Yours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">↩</span>
+        <span class="logo-text">ClaimBack</span>
+      </div>
+      <p class="header-tagline">Recover money companies owe you</p>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="start">
+    <div class="hero-inner">
+      <h1 class="hero-headline">
+        They <em>owe</em> you money.<br/>Let's get it back.
+      </h1>
+      <p class="hero-sub">Upload a bill, rejection, or email. ClaimBack finds your rights, builds the case, and prepares the dispute — you approve before anything sends.</p>
+      <div class="hero-types">
+        <span>Medical bills</span>
+        <span>Airline delays</span>
+        <span>Damaged deliveries</span>
+        <span>Subscription charges</span>
+        <span>Insurance denials</span>
+        <span>Warranty rejections</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPLOAD PANEL -->
+  <main class="main-panel">
+    <div class="upload-section" id="upload-section">
+      <h2 class="section-label">Drop your document</h2>
+
+      <div class="drop-zone" id="drop-zone">
+        <div class="drop-icon">📄</div>
+        <p class="drop-primary">Drag & drop files here</p>
+        <p class="drop-secondary">PDF, image, .eml, .txt — or paste below</p>
+        <label class="btn-upload" for="file-input">Choose files</label>
+        <input type="file" id="file-input" multiple accept=".pdf,.png,.jpg,.jpeg,.gif,.webp,.txt,.eml,.msg" hidden />
+        <div class="file-list" id="file-list"></div>
+      </div>
+
+      <div class="paste-area">
+        <label class="paste-label" for="pasted-text">Or paste email / text content</label>
+        <textarea id="pasted-text" rows="5" placeholder="Paste your rejection email, bill details, charge description..."></textarea>
+      </div>
+
+      <div class="context-area">
+        <label class="paste-label" for="user-context">Anything else we should know? <span class="optional">(optional)</span></label>
+        <textarea id="user-context" rows="3" placeholder="e.g. 'I already called them twice and they refused' or 'Flight was 4 hours late'"></textarea>
+      </div>
+
+      <button class="btn-analyze" id="btn-analyze">
+        <span class="btn-text">Analyze My Claim</span>
+        <span class="btn-icon">→</span>
+      </button>
+    </div>
+
+    <!-- LOADING STATE -->
+    <div class="loading-state hidden" id="loading-state">
+      <div class="pulse-ring"></div>
+      <p class="loading-text">Reading your documents...</p>
+      <p class="loading-sub">Identifying claim type, legal basis, and dispute path</p>
+    </div>
+
+    <!-- RESULTS PANEL -->
+    <div class="results-panel hidden" id="results-panel">
+
+      <!-- Claim Overview -->
+      <div class="result-card card-overview">
+        <div class="card-header">
+          <h2 id="res-claim-type">Claim Type</h2>
+          <div class="strength-badge" id="res-strength-badge">
+            <span id="res-strength">—</span>
+          </div>
+        </div>
+        <p class="card-summary" id="res-summary">—</p>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Amount at stake</span>
+            <span class="meta-value" id="res-amount">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Best path</span>
+            <span class="meta-value" id="res-path">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Submit to</span>
+            <span class="meta-value" id="res-submit-to">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Basis -->
+      <div class="result-card card-legal">
+        <h3 class="card-title">Your Legal Basis</h3>
+        <ul class="legal-list" id="res-legal-list"></ul>
+      </div>
+
+      <!-- Action Steps -->
+      <div class="result-card card-steps">
+        <h3 class="card-title">Dispute Plan</h3>
+        <ol class="steps-list" id="res-steps-list"></ol>
+        <div class="escalation-note" id="res-escalation"></div>
+      </div>
+
+      <!-- Missing Evidence / Questions -->
+      <div class="result-card card-questions hidden" id="card-questions">
+        <h3 class="card-title">⚠ We need a bit more</h3>
+        <p class="card-subtitle" id="res-missing-intro">Before we can finalize your claim, please answer:</p>
+        <div class="questions-list" id="res-questions-list"></div>
+        <div class="reply-area">
+          <textarea id="user-reply" rows="4" placeholder="Your answers here..."></textarea>
+          <button class="btn-refine" id="btn-refine">
+            <span>Update Claim</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Draft Letter -->
+      <div class="result-card card-letter">
+        <div class="card-title-row">
+          <h3 class="card-title">Draft Claim Letter</h3>
+          <button class="btn-copy" id="btn-copy-letter" title="Copy letter">Copy</button>
+        </div>
+        <pre class="letter-preview" id="res-letter"></pre>
+      </div>
+
+      <!-- Approval -->
+      <div class="approval-bar" id="approval-bar">
+        <div class="approval-info">
+          <p class="approval-headline">Ready to submit?</p>
+          <p class="approval-sub" id="approval-method-desc">—</p>
+        </div>
+        <div class="approval-actions">
+          <button class="btn-edit-more" id="btn-edit-more">Adjust claim</button>
+          <button class="btn-approve" id="btn-approve">
+            <span>Approve & Submit</span>
+            <span>✓</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Submitted Confirmation -->
+      <div class="confirmation-panel hidden" id="confirmation-panel">
+        <div class="confirm-icon">✓</div>
+        <h2 class="confirm-headline">Claim Package Ready</h2>
+        <p class="confirm-sub" id="confirm-instructions"></p>
+        <div class="confirm-actions">
+          <button class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
+          <button class="btn-new-claim" onclick="resetApp()">Start a new claim</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>ClaimBack is an AI assistant, not a lawyer. For complex disputes, consult a consumer rights attorney.</p>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
