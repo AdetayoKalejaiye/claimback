@@ -12,7 +12,7 @@
 .nav-link {
   font-size: 14px;
   font-weight: 500;
-  color: #9b978f;
+  color: var(--ink-faint);
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -50,14 +50,15 @@
 }
 
 .stat-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
   font-size: 32px;
   color: var(--ink);
   line-height: 1;
   letter-spacing: -0.5px;
 }
 
-.stat-block.highlight .stat-num { color: var(--gold); }
+.stat-block.highlight .stat-num { color: var(--primary); }
 
 .stat-label {
   font-size: 12px;
@@ -67,7 +68,7 @@
   color: var(--ink-faint);
 }
 
-.stat-block.highlight .stat-label { color: #9b978f; }
+.stat-block.highlight .stat-label { color: var(--ink-faint); }
 
 /* ── Section ── */
 .dash-section {
@@ -86,23 +87,25 @@
 }
 
 .dash-section-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   font-size: 20px;
   color: var(--ink);
 }
 
 .btn-new-dash {
-  background: var(--gold);
+  background: var(--primary);
   color: var(--white);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: 999px;
   transition: background 0.15s;
 }
 
-.btn-new-dash:hover { background: #b07c20; }
+.btn-new-dash:hover { background: #4f2286; }
 
 /* ── Claims table ── */
 .claims-table-wrap {
@@ -149,7 +152,7 @@
 .td-date   { color: var(--ink-faint); font-size: 12px; white-space: nowrap; }
 
 .link-view {
-  color: var(--gold);
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
   font-size: 13px;
@@ -170,11 +173,13 @@
 }
 
 .badge-strength.strong   { background: var(--green-bg);  color: var(--green); }
-.badge-strength.moderate { background: var(--gold-bg);   color: var(--gold); }
+.badge-strength.moderate { background: var(--primary-bg);   color: var(--primary); }
 .badge-strength.weak     { background: var(--red-bg);    color: var(--red); }
 
 .badge-status {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   border-radius: 20px;
   padding: 3px 10px;
   font-size: 11px;
@@ -183,13 +188,25 @@
   letter-spacing: 0.5px;
 }
 
-.badge-status.pending   { background: #f0f0ee; color: var(--ink-faint); }
+/* Signature detail: a small health dot, like a monitor's status indicator.
+   It just borrows the badge's own text color, so every status stays in sync. */
+.badge-status::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.badge-status.pending   { background: #f0eef7; color: var(--ink-faint); }
 .badge-status.analyzed  { background: var(--slate-light); color: var(--slate); }
-.badge-status.approved  { background: var(--gold-bg); color: var(--gold); }
+.badge-status.approved  { background: var(--primary-bg); color: var(--primary); }
 .badge-status.submitted { background: #e8eaf6; color: #3949ab; }
 .badge-status.resolved  { background: var(--green-bg); color: var(--green); }
 .badge-status.error     { background: var(--red-bg); color: var(--red); }
-.badge-status.closed    { background: #f0f0ee; color: var(--ink-faint); }
+.badge-status.closed    { background: #f0eef7; color: var(--ink-faint); }
 
 .ocr-tag {
   font-size: 12px;
@@ -207,7 +224,7 @@
   color: var(--ink-faint);
 }
 
-.empty-state a { color: var(--gold); }
+.empty-state a { color: var(--primary); }
 
 /* ── Detail page ── */
 .detail-breadcrumb {
@@ -219,7 +236,7 @@
 }
 
 .detail-breadcrumb a {
-  color: var(--gold);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }
@@ -248,13 +265,13 @@
   margin-bottom: 4px;
 }
 
-.text-input:focus { outline: none; border-color: var(--gold); }
+.text-input:focus { outline: none; border-color: var(--primary); }
 
 /* ── Modal ── */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(26,24,20,0.55);
+  background: rgba(20,9,43,0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,7 +289,9 @@
 }
 
 .modal-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   font-size: 22px;
   color: var(--ink);
   margin-bottom: 8px;
