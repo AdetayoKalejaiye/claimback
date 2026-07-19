@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimBack — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:10px">
+          <span class="logo-mark">↩</span>
+          <span class="logo-text">ClaimBack</span>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="/" class="nav-link">New Claim</a>
+        <a href="/dashboard" class="nav-link active">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dash-main">
+
+    <!-- Stats strip -->
+    <div class="stats-strip">
+      <div class="stat-block">
+        <span class="stat-num">{{ stats.total }}</span>
+        <span class="stat-label">Total claims</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num">{{ stats.pending_count }}</span>
+        <span class="stat-label">In progress</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-num">{{ stats.resolved_count }}</span>
+        <span class="stat-label">Resolved</span>
+      </div>
+      <div class="stat-block highlight">
+        <span class="stat-num">${{ "{:,.2f}".format(stats.total_recovered / 100) }}</span>
+        <span class="stat-label">Total recovered</span>
+      </div>
+    </div>
+
+    <!-- Claims table -->
+    <div class="dash-section">
+      <div class="dash-section-header">
+        <h2 class="dash-section-title">All Claims</h2>
+        <a href="/" class="btn-new-dash">+ New claim</a>
+      </div>
+
+      {% if claims %}
+      <div class="claims-table-wrap">
+        <table class="claims-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Type</th>
+              <th>Summary</th>
+              <th>Amount</th>
+              <th>Strength</th>
+              <th>Status</th>
+              <th>OCR</th>
+              <th>Created</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in claims %}
+            <tr class="claim-row status-{{ c.status }}">
+              <td class="td-id">{{ c.id }}</td>
+              <td class="td-type">{{ c.claim_type or '—' }}</td>
+              <td class="td-summary">{{ (c.summary or '—')[:90] }}{% if c.summary and c.summary|length > 90 %}…{% endif %}</td>
+              <td class="td-amount">{{ c.amount_str or '—' }}</td>
+              <td class="td-strength">
+                {% if c.strength %}
+                <span class="badge-strength {{ c.strength|lower }}">{{ c.strength }}</span>
+                {% else %}—{% endif %}
+              </td>
+              <td class="td-status">
+                <span class="badge-status {{ c.status }}">{{ c.status }}</span>
+              </td>
+              <td class="td-ocr">
+                {% if c.ocr_used %}
+                <span class="ocr-tag" title="{{ c.ocr_pages }} page(s) scanned">📷 {{ c.ocr_pages }}p</span>
+                {% else %}—{% endif %}
+              </td>
+              <td class="td-date">{{ c.created_at[:10] if c.created_at else '—' }}</td>
+              <td class="td-actions">
+                <a href="/claim/{{ c.id }}" class="link-view">View →</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <p>No claims yet. <a href="/">Start your first one →</a></p>
+      </div>
+      {% endif %}
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>ClaimBack is an AI assistant, not a lawyer. For complex disputes, consult a consumer rights attorney.</p>
+  </footer>
+
+</body>
+</html>

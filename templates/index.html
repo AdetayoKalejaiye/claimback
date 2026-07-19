@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
 </head>
 <body>
 
@@ -17,7 +18,10 @@
         <span class="logo-mark">↩</span>
         <span class="logo-text">ClaimBack</span>
       </div>
-      <p class="header-tagline">Recover money companies owe you</p>
+      <nav class="header-nav">
+        <a href="/" class="nav-link active">New Claim</a>
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+      </nav>
     </div>
   </header>
 
@@ -67,6 +71,12 @@
         <span class="btn-text">Analyze My Claim</span>
         <span class="btn-icon">→</span>
       </button>
+    </div>
+
+    <!-- OCR NOTICE (shown when scanned docs detected) -->
+    <div class="ocr-notice hidden" id="ocr-notice">
+      <span class="ocr-icon">📷</span>
+      <span id="ocr-notice-text">Scanned document detected — running OCR before analysis</span>
     </div>
 
     <!-- LOADING STATE -->
@@ -162,7 +172,8 @@
         <p class="confirm-sub" id="confirm-instructions"></p>
         <div class="confirm-actions">
           <button class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
-          <button class="btn-new-claim" onclick="resetApp()">Start a new claim</button>
+          <a href="/dashboard" class="btn-new-claim" style="text-decoration:none;display:inline-block;line-height:1.5">View all claims</a>
+          <button class="btn-new-claim" onclick="resetApp()">New claim</button>
         </div>
       </div>
 

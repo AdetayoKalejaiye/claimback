@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claim #{{ claim.id }} — ClaimBack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:10px">
+          <span class="logo-mark">↩</span>
+          <span class="logo-text">ClaimBack</span>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="/" class="nav-link">New Claim</a>
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dash-main">
+
+    <div class="detail-breadcrumb">
+      <a href="/dashboard">← All claims</a>
+      <span>Claim #{{ claim.id }}</span>
+    </div>
+
+    <!-- Overview -->
+    <div class="result-card card-overview" style="margin-bottom:20px">
+      <div class="card-header">
+        <h2>{{ claim.claim_type or 'Claim #' + claim.id|string }}</h2>
+        <div class="strength-badge {{ (claim.strength or 'moderate')|lower }}">
+          <span>{{ claim.strength or '—' }}</span>
+        </div>
+      </div>
+      <p class="card-summary">{{ claim.summary or '—' }}</p>
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="meta-label">Amount at stake</span>
+          <span class="meta-value">{{ claim.amount_str or '—' }}</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value"><span class="badge-status {{ claim.status }}">{{ claim.status }}</span></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Submit to</span>
+          <span class="meta-value">{{ claim.submit_name or '—' }}</span>
+        </div>
+        {% if claim.ocr_used %}
+        <div class="meta-item">
+          <span class="meta-label">OCR scanned</span>
+          <span class="meta-value">{{ claim.ocr_pages }} page(s)</span>
+        </div>
+        {% endif %}
+        {% if claim.recovered_cents %}
+        <div class="meta-item">
+          <span class="meta-label">Recovered</span>
+          <span class="meta-value recovered-amount">${{ "{:,.2f}".format(claim.recovered_cents / 100) }}</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Legal Basis -->
+    {% if claim.legal_basis %}
+    <div class="result-card card-legal" style="margin-bottom:20px">
+      <h3 class="card-title">Legal Basis</h3>
+      <ul class="legal-list">
+        {% for law in claim.legal_basis %}
+        <li>{{ law }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <!-- Dispute Steps -->
+    {% if claim.dispute_steps %}
+    <div class="result-card card-steps" style="margin-bottom:20px">
+      <h3 class="card-title">Dispute Plan</h3>
+      <ol class="steps-list">
+        {% for step in claim.dispute_steps %}
+        <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+      {% if claim.dispute_escalation %}
+      <div class="escalation-note visible">↑ If that fails: {{ claim.dispute_escalation }}</div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Draft Letter -->
+    {% if claim.draft_letter %}
+    <div class="result-card card-letter" style="margin-bottom:20px">
+      <div class="card-title-row">
+        <h3 class="card-title">Claim Letter</h3>
+        <button class="btn-copy" id="btn-copy-letter">Copy</button>
+      </div>
+      <pre class="letter-preview" id="letter-text">{{ claim.draft_letter }}</pre>
+    </div>
+    {% endif %}
+
+    <!-- Resolution notes -->
+    {% if claim.resolution_note %}
+    <div class="result-card" style="margin-bottom:20px;border-left:5px solid var(--green)">
+      <h3 class="card-title">Resolution</h3>
+      <p style="color:var(--ink-muted)">{{ claim.resolution_note }}</p>
+      {% if claim.resolved_at %}
+      <p style="font-size:13px;color:var(--ink-faint);margin-top:8px">Resolved {{ claim.resolved_at[:10] }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Actions -->
+    <div class="detail-actions">
+      {% if claim.status not in ['resolved', 'closed'] %}
+      <button class="btn-approve" id="btn-resolve-open">Mark as Resolved</button>
+      {% endif %}
+      <a href="/" class="btn-edit-more">Start new claim</a>
+    </div>
+
+  </main>
+
+  <!-- Resolve Modal -->
+  <div class="modal-overlay hidden" id="resolve-modal">
+    <div class="modal-box">
+      <h3 class="modal-title">Mark claim as resolved</h3>
+      <p class="modal-sub">How much did you recover? (Enter 0 if nothing was returned.)</p>
+      <label class="paste-label" for="recovered-input">Amount recovered ($)</label>
+      <input type="text" id="recovered-input" placeholder="e.g. 342.00" class="text-input" />
+      <label class="paste-label" style="margin-top:14px" for="note-input">Resolution note</label>
+      <textarea id="note-input" rows="3" placeholder="e.g. 'Airline refunded in full after 2 weeks'"></textarea>
+      <div class="modal-actions">
+        <button class="btn-edit-more" id="btn-cancel-resolve">Cancel</button>
+        <button class="btn-approve" id="btn-confirm-resolve">Save resolution</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>ClaimBack is an AI assistant, not a lawyer. For complex disputes, consult a consumer rights attorney.</p>
+  </footer>
+
+  <script>
+    const CLAIM_ID = {{ claim.id }};
+
+    // Copy letter
+    const copyBtn = document.getElementById("btn-copy-letter");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(document.getElementById("letter-text").textContent).then(() => {
+          copyBtn.textContent = "Copied!";
+          copyBtn.classList.add("copied");
+          setTimeout(() => { copyBtn.textContent = "Copy"; copyBtn.classList.remove("copied"); }, 2000);
+        });
+      });
+    }
+
+    // Resolve modal
+    const resolveBtn = document.getElementById("btn-resolve-open");
+    const modal      = document.getElementById("resolve-modal");
+    const cancelBtn  = document.getElementById("btn-cancel-resolve");
+    const confirmBtn = document.getElementById("btn-confirm-resolve");
+
+    if (resolveBtn) {
+      resolveBtn.addEventListener("click", () => modal.classList.remove("hidden"));
+      cancelBtn.addEventListener("click",  () => modal.classList.add("hidden"));
+
+      confirmBtn.addEventListener("click", async () => {
+        const recovered = document.getElementById("recovered-input").value;
+        const note      = document.getElementById("note-input").value;
+        confirmBtn.textContent = "Saving...";
+        confirmBtn.disabled = true;
+
+        const res = await fetch(`/claim/${CLAIM_ID}/resolve`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ recovered, note }),
+        });
+
+        if (res.ok) {
+          window.location.reload();
+        } else {
+          alert("Something went wrong.");
+          confirmBtn.textContent = "Save resolution";
+          confirmBtn.disabled = false;
+        }
+      });
+    }
+  </script>
+</body>
+</html>

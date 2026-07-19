@@ -97,7 +97,17 @@ async function analyze() {
 
     if (data.error) { alert("Error: " + data.error); hideLoading(); return; }
 
-    state.analysis = data.analysis;
+    state.analysis  = data.analysis;
+    state.claim_id  = data.claim_id;
+
+    // Show OCR notice if scanned docs were processed
+    if (data.ocr_used) {
+      const notice = document.getElementById("ocr-notice");
+      document.getElementById("ocr-notice-text").textContent =
+        `📷 OCR ran on ${data.ocr_pages} page(s) — scanned text extracted successfully`;
+      notice.classList.remove("hidden");
+    }
+
     renderResults(data.analysis);
   } catch (e) {
     alert("Something went wrong. Please try again.");
