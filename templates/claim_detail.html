@@ -45,7 +45,7 @@
       <div class="meta-row">
         <div class="meta-item">
           <span class="meta-label">Amount at stake</span>
-          <span class="meta-value">{{ claim.amount_str or '—' }}</span>
+          <span class="meta-value meta-value--num">{{ claim.amount_str or '—' }}</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Status</span>
@@ -58,13 +58,13 @@
         {% if claim.ocr_used %}
         <div class="meta-item">
           <span class="meta-label">OCR scanned</span>
-          <span class="meta-value">{{ claim.ocr_pages }} page(s)</span>
+          <span class="meta-value meta-value--num">{{ claim.ocr_pages }} page(s)</span>
         </div>
         {% endif %}
         {% if claim.recovered_cents %}
         <div class="meta-item">
           <span class="meta-label">Recovered</span>
-          <span class="meta-value recovered-amount">${{ "{:,.2f}".format(claim.recovered_cents / 100) }}</span>
+          <span class="meta-value meta-value--num recovered-amount">${{ "{:,.2f}".format(claim.recovered_cents / 100) }}</span>
         </div>
         {% endif %}
       </div>
@@ -102,7 +102,7 @@
     <div class="result-card card-letter" style="margin-bottom:20px">
       <div class="card-title-row">
         <h3 class="card-title">Claim Letter</h3>
-        <button class="btn-copy" id="btn-copy-letter">Copy</button>
+        <button type="button" class="btn-copy" id="btn-copy-letter">Copy</button>
       </div>
       <pre class="letter-preview" id="letter-text">{{ claim.draft_letter }}</pre>
     </div>
@@ -122,7 +122,7 @@
     <!-- Actions -->
     <div class="detail-actions">
       {% if claim.status not in ['resolved', 'closed'] %}
-      <button class="btn-approve" id="btn-resolve-open">Mark as Resolved</button>
+      <button type="button" class="btn-approve" id="btn-resolve-open">Mark as Resolved</button>
       {% endif %}
       <a href="/" class="btn-edit-more">Start new claim</a>
     </div>
@@ -133,14 +133,14 @@
   <div class="modal-overlay hidden" id="resolve-modal">
     <div class="modal-box">
       <h3 class="modal-title">Mark claim as resolved</h3>
-      <p class="modal-sub">How much did you recover? (Enter 0 if nothing was returned.)</p>
+      <p class="modal-sub">How much did you recover? Enter 0 if nothing was returned.</p>
       <label class="paste-label" for="recovered-input">Amount recovered ($)</label>
       <input type="text" id="recovered-input" placeholder="e.g. 342.00" class="text-input" />
       <label class="paste-label" style="margin-top:14px" for="note-input">Resolution note</label>
       <textarea id="note-input" rows="3" placeholder="e.g. 'Airline refunded in full after 2 weeks'"></textarea>
       <div class="modal-actions">
-        <button class="btn-edit-more" id="btn-cancel-resolve">Cancel</button>
-        <button class="btn-approve" id="btn-confirm-resolve">Save resolution</button>
+        <button type="button" class="btn-edit-more" id="btn-cancel-resolve">Cancel</button>
+        <button type="button" class="btn-approve" id="btn-confirm-resolve">Save resolution</button>
       </div>
     </div>
   </div>

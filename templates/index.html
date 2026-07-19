@@ -29,7 +29,7 @@
   <section class="hero" id="start">
     <div class="hero-inner">
       <h1 class="hero-headline">
-        They <em>owe</em> you money.<br/>Let's get it back.
+        They owe you money.<br/>Let's get it back.
       </h1>
       <p class="hero-sub">Upload a bill, rejection, or email. ClaimBack finds your rights, builds the case, and prepares the dispute — you approve before anything sends.</p>
       <div class="hero-types">
@@ -67,7 +67,7 @@
         <textarea id="user-context" rows="3" placeholder="e.g. 'I already called them twice and they refused' or 'Flight was 4 hours late'"></textarea>
       </div>
 
-      <button class="btn-analyze" id="btn-analyze">
+      <button type="button" class="btn-analyze" id="btn-analyze">
         <span class="btn-text">Analyze My Claim</span>
         <span class="btn-icon">→</span>
       </button>
@@ -101,7 +101,7 @@
         <div class="meta-row">
           <div class="meta-item">
             <span class="meta-label">Amount at stake</span>
-            <span class="meta-value" id="res-amount">—</span>
+            <span class="meta-value meta-value--num" id="res-amount">—</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">Best path</span>
@@ -134,7 +134,7 @@
         <div class="questions-list" id="res-questions-list"></div>
         <div class="reply-area">
           <textarea id="user-reply" rows="4" placeholder="Your answers here..."></textarea>
-          <button class="btn-refine" id="btn-refine">
+          <button type="button" class="btn-refine" id="btn-refine">
             <span>Update Claim</span>
             <span>→</span>
           </button>
@@ -145,7 +145,7 @@
       <div class="result-card card-letter">
         <div class="card-title-row">
           <h3 class="card-title">Draft Claim Letter</h3>
-          <button class="btn-copy" id="btn-copy-letter" title="Copy letter">Copy</button>
+          <button type="button" class="btn-copy" id="btn-copy-letter" title="Copy letter">Copy</button>
         </div>
         <pre class="letter-preview" id="res-letter"></pre>
       </div>
@@ -157,8 +157,8 @@
           <p class="approval-sub" id="approval-method-desc">—</p>
         </div>
         <div class="approval-actions">
-          <button class="btn-edit-more" id="btn-edit-more">Adjust claim</button>
-          <button class="btn-approve" id="btn-approve">
+          <button type="button" class="btn-edit-more" id="btn-edit-more">Adjust claim</button>
+          <button type="button" class="btn-approve" id="btn-approve">
             <span>Approve & Submit</span>
             <span>✓</span>
           </button>
@@ -171,9 +171,9 @@
         <h2 class="confirm-headline">Claim Package Ready</h2>
         <p class="confirm-sub" id="confirm-instructions"></p>
         <div class="confirm-actions">
-          <button class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
+          <button type="button" class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
           <a href="/dashboard" class="btn-new-claim" style="text-decoration:none;display:inline-block;line-height:1.5">View all claims</a>
-          <button class="btn-new-claim" onclick="resetApp()">New claim</button>
+          <button type="button" class="btn-new-claim" onclick="resetApp()">New claim</button>
         </div>
       </div>
 
