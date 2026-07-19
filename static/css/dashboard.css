@@ -17,7 +17,7 @@
   transition: color 0.15s;
 }
 
-.nav-link:hover, .nav-link.active { color: var(--white); }
+.nav-link:hover, .nav-link.active { color: var(--primary); }
 
 /* ── Dashboard layout ── */
 .dash-main {
@@ -101,7 +101,7 @@
   font-size: 14px;
   font-weight: 600;
   padding: 8px 18px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   transition: background 0.15s;
 }
 
