@@ -885,3 +885,267 @@ textarea::placeholder { color: var(--ink-faint); }
   .approval-bar { flex-direction: column; align-items: flex-start; }
   .meta-row { gap: 16px; }
 }
+
+/* ===================================================
+   DASHBOARD
+=================================================== */
+
+.dash-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ===== STATS ===== */
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.stat-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-block.highlight {
+  border-left: 4px solid var(--accent);
+}
+
+.stat-num {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-block.highlight .stat-num {
+  color: var(--green);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+/* ===== SECTION ===== */
+
+.dash-section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.dash-section-header {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.btn-new-dash {
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background .15s;
+}
+
+.btn-new-dash:hover {
+  background: #106ebe;
+}
+
+/* ===== TABLE ===== */
+
+.claims-table-wrap {
+  overflow-x: auto;
+}
+
+.claims-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.claims-table thead {
+  background: var(--neutral-bg);
+}
+
+.claims-table th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  color: var(--ink-faint);
+  padding: 16px 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.claims-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.claim-row:hover {
+  background: var(--accent-bg);
+}
+
+/* ===== COLUMN STYLES ===== */
+
+.td-id {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.td-type {
+  font-weight: 600;
+}
+
+.td-summary {
+  color: var(--ink-muted);
+  max-width: 360px;
+}
+
+.td-amount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.td-date {
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* ===== OCR TAG ===== */
+
+.ocr-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--info-bg);
+  color: var(--info);
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===== VIEW LINK ===== */
+
+.link-view {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.link-view:hover {
+  text-decoration: underline;
+}
+
+/* ===== ROW STATUS ACCENTS ===== */
+
+.claim-row.status-pending {
+  border-left: 3px solid var(--amber);
+}
+
+.claim-row.status-open {
+  border-left: 3px solid var(--accent);
+}
+
+.claim-row.status-submitted {
+  border-left: 3px solid var(--info);
+}
+
+.claim-row.status-resolved {
+  border-left: 3px solid var(--green);
+}
+
+.claim-row.status-closed {
+  border-left: 3px solid var(--ink-faint);
+}
+
+/* ===== EMPTY STATE ===== */
+
+.empty-state {
+  padding: 70px 24px;
+  text-align: center;
+}
+
+.empty-state p {
+  color: var(--ink-muted);
+  font-size: 16px;
+}
+
+.empty-state a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.empty-state a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+  .dash-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .claims-table th,
+  .claims-table td {
+    padding: 14px 12px;
+    font-size: 13px;
+  }
+
+  .td-summary {
+    min-width: 240px;
+  }
+
+  .stat-num {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .dash-main {
+    padding: 24px 16px 60px;
+  }
+
+  .stats-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-section-header {
+    padding: 20px;
+  }
+}
