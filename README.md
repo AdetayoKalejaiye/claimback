@@ -15,20 +15,39 @@ ClaimBack takes your uploaded documents (medical bills, rejection emails, airlin
 ## Quick Start
 
 ```bash
-# 1. Clone and enter the project
-cd claimback
+cd claimback-main
 
-# 2. Install dependencies
-pip install -r requirements.txt
+# 1. Install dependencies (Python 3.10+ recommended)
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+
+# 2. Browser automation uses your installed Google Chrome directly
+#    (channel="chrome") — no `playwright install` download needed.
+#    Just make sure Google Chrome is installed.
 
 # 3. Set your API key
 cp .env.example .env
 # Edit .env and add your ANTHROPIC_API_KEY
 
-# 4. Run
-python app.py
+# 4. Run  (use_reloader is already disabled in app.py — required so the single
+#    Playwright-owned browser lives in one process)
+export ANTHROPIC_API_KEY=...     # or rely on .env
+.venv/bin/python app.py
 # Open http://localhost:5000
 ```
+
+## Demo flow (airline / EU261)
+
+1. Click **"Try the airline demo"** — loads a canned cancelled-flight email + hotel receipt.
+2. ClaimBack analyzes and shows EU261 eligibility with a fixed statutory amount (e.g. **€400**).
+3. Click **Approve & Auto-fill** — a **real Chrome window opens** and types the claim into the
+   SkyClaim reimbursement portal field-by-field, then **stops at the submit button**.
+4. ClaimBack shows a "here's exactly what I'll submit" review table.
+5. Click **Confirm & Submit** — the browser clicks submit, the portal returns a reference
+   (`SKY-XXXXXX`), and the claim is tracked as *submitted* on the dashboard.
+
+Persistence is a plain JSON file (`claims.json`) — open it to inspect or reset the demo.
+
 
 ---
 

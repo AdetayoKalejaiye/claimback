@@ -29,24 +29,35 @@
   <section class="hero" id="start">
     <div class="hero-inner">
       <h1 class="hero-headline">
-        They owe you money.<br/>Let's get it back.
+        They <em>owe</em> you money.<br/>Let's get it back.
       </h1>
-      <p class="hero-sub">Upload a bill, rejection, or email. ClaimBack finds your rights, builds the case, and prepares the dispute — you approve before anything sends.</p>
-      <div class="hero-types">
-        <span>Medical bills</span>
-        <span>Airline delays</span>
-        <span>Damaged deliveries</span>
-        <span>Subscription charges</span>
-        <span>Insurance denials</span>
-        <span>Warranty rejections</span>
+      <p class="hero-sub">Tell us what happened — we find your rights, fill the company's form, and pause for your approval before anything is submitted.</p>
+
+      <!-- Primary entry: type the situation -->
+      <div class="hero-search">
+        <textarea id="hero-input" rows="1"
+          placeholder="Describe what happened — we'll find your rights and fill the form"></textarea>
+        <button class="hero-go" id="hero-go" title="Start (Enter)" aria-label="Start">↑</button>
       </div>
+
+      <div class="hero-pills" id="hero-pills">
+        <button type="button" class="hero-pill" data-q="Delta cancelled my flight DL1049 from Atlanta (ATL) to Boston (BOS) on July 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP. I paid $182 for a hotel and $40 for meals overnight — reimburse me. Email jane.doe@email.com, phone 650-555-0142.">✈ Delta reimbursement</button>
+        <button type="button" class="hero-pill" data-q="FedEx damaged my package. My name is Jane Doe, email jane.doe@email.com, phone 650-555-0142. It was a laptop shipped July 10, 2026, declared value $950, arrived with a cracked screen. File a damage claim for $950.">📦 FedEx damage claim</button>
+        <button type="button" class="hero-pill" data-q="My subscription was charged $79 after I cancelled — I want a refund.">💳 Subscription refund</button>
+      </div>
+
+      <p class="hero-hint">Press Enter to go · or <a href="#" id="hero-demo-link">try the airline demo</a> · <a href="#drop-zone" id="hero-upload-link">upload a document</a></p>
     </div>
   </section>
 
   <!-- UPLOAD PANEL -->
   <main class="main-panel">
     <div class="upload-section" id="upload-section">
-      <h2 class="section-label">Drop your document</h2>
+      <h2 class="section-label">…or drop your document</h2>
+
+      <button class="btn-demo" id="btn-demo" type="button">
+        ✨ Try the airline demo — cancelled flight + hotel receipt
+      </button>
 
       <div class="drop-zone" id="drop-zone">
         <div class="drop-icon">📄</div>
@@ -67,7 +78,7 @@
         <textarea id="user-context" rows="3" placeholder="e.g. 'I already called them twice and they refused' or 'Flight was 4 hours late'"></textarea>
       </div>
 
-      <button type="button" class="btn-analyze" id="btn-analyze">
+      <button class="btn-analyze" id="btn-analyze">
         <span class="btn-text">Analyze My Claim</span>
         <span class="btn-icon">→</span>
       </button>
@@ -134,7 +145,7 @@
         <div class="questions-list" id="res-questions-list"></div>
         <div class="reply-area">
           <textarea id="user-reply" rows="4" placeholder="Your answers here..."></textarea>
-          <button type="button" class="btn-refine" id="btn-refine">
+          <button class="btn-refine" id="btn-refine">
             <span>Update Claim</span>
             <span>→</span>
           </button>
@@ -145,7 +156,7 @@
       <div class="result-card card-letter">
         <div class="card-title-row">
           <h3 class="card-title">Draft Claim Letter</h3>
-          <button type="button" class="btn-copy" id="btn-copy-letter" title="Copy letter">Copy</button>
+          <button class="btn-copy" id="btn-copy-letter" title="Copy letter">Copy</button>
         </div>
         <pre class="letter-preview" id="res-letter"></pre>
       </div>
@@ -157,23 +168,80 @@
           <p class="approval-sub" id="approval-method-desc">—</p>
         </div>
         <div class="approval-actions">
-          <button type="button" class="btn-edit-more" id="btn-edit-more">Adjust claim</button>
-          <button type="button" class="btn-approve" id="btn-approve">
-            <span>Approve & Submit</span>
-            <span>✓</span>
+          <button class="btn-edit-more" id="btn-edit-more">Adjust claim</button>
+          <button class="btn-escalate-open" id="btn-escalate">They refused? Escalate ↗</button>
+          <button class="btn-approve" id="btn-approve">
+            <span>Approve &amp; Auto-fill</span>
+            <span>→</span>
           </button>
+        </div>
+      </div>
+
+      <!-- Autofill panel: choose target, then browser fills & pauses -->
+      <div class="autofill-panel hidden" id="autofill-panel">
+        <div class="autofill-head">
+          <span class="autofill-badge">🤖 Live</span>
+          <div>
+            <p class="autofill-title" id="autofill-title">Where should I file this?</p>
+            <p class="autofill-sub" id="autofill-sub">Type the company, or use the safe demo portal.</p>
+          </div>
+        </div>
+
+        <!-- Target chooser -->
+        <div class="autofill-chooser" id="autofill-chooser">
+          <input type="text" id="company-input" class="company-input"
+                 placeholder="e.g. Delta reimbursement · FedEx" autocomplete="off" />
+          <div class="chooser-actions">
+            <button class="btn-approve" id="btn-find-fill">
+              <span>Find &amp; fill their form</span><span>→</span>
+            </button>
+            <button class="btn-edit-more" id="btn-safe-demo">Use safe demo portal</button>
+          </div>
+          <p class="chooser-hint">Real sites (Delta, FedEx) are filled live and <strong>stop at submit — nothing is filed</strong>. Anything else uses the SkyClaim demo portal.</p>
+        </div>
+
+        <!-- Review gate -->
+        <div class="autofill-review hidden" id="autofill-review-wrap">
+          <p class="autofill-review-label">Here's exactly what I'll submit:</p>
+          <table class="autofill-review" id="autofill-review"></table>
+          <div class="autofill-actions">
+            <button class="btn-edit-more" onclick="resetApp()">Cancel</button>
+            <button class="btn-approve" id="btn-confirm-submit">
+              <span>Confirm &amp; Submit</span>
+              <span>✓</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Escalate panel: drafted email to the authority -->
+      <div class="escalate-panel hidden" id="escalate-panel">
+        <h3 class="card-title">Escalation drafted</h3>
+        <p class="escalate-authority" id="escalate-authority">—</p>
+        <div class="escalate-field"><span>To</span><code id="escalate-to">—</code></div>
+        <div class="escalate-field"><span>Subject</span><code id="escalate-subject">—</code></div>
+        <pre class="letter-preview" id="escalate-body"></pre>
+        <div class="autofill-actions">
+          <button class="btn-edit-more" id="btn-escalate-copy">Copy</button>
+          <a class="btn-approve" id="btn-escalate-mail" href="#">
+            <span>Open in email app</span><span>✉</span>
+          </a>
         </div>
       </div>
 
       <!-- Submitted Confirmation -->
       <div class="confirmation-panel hidden" id="confirmation-panel">
         <div class="confirm-icon">✓</div>
-        <h2 class="confirm-headline">Claim Package Ready</h2>
+        <h2 class="confirm-headline">Claim Submitted</h2>
         <p class="confirm-sub" id="confirm-instructions"></p>
+        <div class="confirm-reference hidden" id="confirm-reference-wrap">
+          Claim reference
+          <span id="confirm-reference">—</span>
+        </div>
         <div class="confirm-actions">
-          <button type="button" class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
+          <button class="btn-copy-all" id="btn-copy-all">Copy full claim package</button>
           <a href="/dashboard" class="btn-new-claim" style="text-decoration:none;display:inline-block;line-height:1.5">View all claims</a>
-          <button type="button" class="btn-new-claim" onclick="resetApp()">New claim</button>
+          <button class="btn-new-claim" onclick="resetApp()">New claim</button>
         </div>
       </div>
 

@@ -78,6 +78,64 @@ function fileIcon(f) {
 /* ── Analyze ── */
 btnAnalyze.addEventListener("click", analyze);
 
+/* ── Hero search box: type the situation → analyze → auto-open the company form ── */
+const heroInput = document.getElementById("hero-input");
+const heroGo = document.getElementById("hero-go");
+
+async function runFromText(text) {
+  text = (text || "").trim();
+  if (!text) { heroInput.focus(); return; }
+  state.analysis = null;
+  state.files = [];
+  renderFileList();
+  pastedText.value = text;       // analyze() reads this
+  userContext.value = "";
+  await analyze();               // sets state.analysis + renders results on success
+  if (!state.analysis) return;   // analysis failed (alert already shown)
+
+  // Remember the named company, but DO NOT act yet — the user reviews/edits the
+  // drafted claim first and must click "Approve & Auto-fill" to start the browser.
+  state.pendingCompany = /delta|fedex|fed ex/i.test(text) ? text : "";
+}
+
+heroGo.addEventListener("click", () => runFromText(heroInput.value));
+heroInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); runFromText(heroInput.value); }
+});
+document.querySelectorAll(".hero-pill").forEach((pill) => {
+  pill.addEventListener("click", () => {
+    heroInput.value = pill.dataset.q || pill.textContent;
+    heroInput.focus();
+  });
+});
+document.getElementById("hero-demo-link").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("btn-demo").click();
+});
+
+/* ── One-click airline demo (loads the canned EU261 packet) ── */
+const DEMO_FILES = [
+  "/static/demo/cancellation_email.txt",
+  "/static/demo/hotel_receipt.txt",
+];
+document.getElementById("btn-demo").addEventListener("click", async () => {
+  try {
+    const files = await Promise.all(DEMO_FILES.map(async (url) => {
+      const res = await fetch(url);
+      const text = await res.text();
+      const name = url.split("/").pop();
+      return new File([text], name, { type: "text/plain" });
+    }));
+    state.files = files;
+    renderFileList();
+    userContext.value =
+      "Flight was cancelled the night before departure; I had to pay for a hotel and meals.";
+    analyze();
+  } catch (e) {
+    alert("Couldn't load the demo files.");
+  }
+});
+
 async function analyze() {
   if (state.files.length === 0 && !pastedText.value.trim()) {
     alert("Please upload a document or paste your text first.");
@@ -136,33 +194,171 @@ document.getElementById("btn-refine").addEventListener("click", async () => {
   document.getElementById("user-reply").value = "";
 });
 
-/* ── Approve ── */
+/* ── Approve → choose where to file (company box or safe demo) ── */
 document.getElementById("btn-approve").addEventListener("click", async () => {
   const res = await fetch("/approve", { method: "POST" });
   const data = await res.json();
-
   if (data.error) { alert("Error: " + data.error); return; }
-
   state.claimPackage = data.claim_package;
 
-  // Hide approval bar, show confirmation
   document.getElementById("approval-bar").classList.add("hidden");
+  document.getElementById("escalate-panel").classList.add("hidden");
+  const panel = document.getElementById("autofill-panel");
+  panel.classList.remove("hidden");
+  document.getElementById("autofill-review-wrap").classList.add("hidden");
+  panel.scrollIntoView({ behavior: "smooth" });
+
+  // If a company was named up front (Delta/FedEx), approving fills that real
+  // site directly. Otherwise show the chooser to pick a target.
+  if (state.pendingCompany) {
+    document.getElementById("autofill-chooser").classList.add("hidden");
+    runAutofill(state.pendingCompany);
+  } else {
+    document.getElementById("autofill-chooser").classList.remove("hidden");
+    document.getElementById("autofill-title").textContent = "Where should I file this?";
+    document.getElementById("autofill-sub").textContent =
+      "Type the company, or use the safe demo portal.";
+    document.getElementById("company-input").focus();
+  }
+});
+
+/* Fill a form (company text → real site, or empty → mock SkyClaim) */
+async function runAutofill(company) {
+  document.getElementById("autofill-chooser").classList.add("hidden");
+  document.getElementById("autofill-review-wrap").classList.add("hidden");
+  document.getElementById("autofill-title").textContent =
+    company ? "Opening the company's site…" : "Filling the demo portal…";
+  document.getElementById("autofill-sub").textContent =
+    "Watch the Chrome window — ClaimBack is completing the claim form for you.";
+
+  const fillRes = await fetch("/autofill", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ company: company || "" }),
+  });
+  const fillData = await fillRes.json();
+
+  if (fillData.error) {
+    document.getElementById("autofill-title").textContent = "Couldn't auto-fill";
+    document.getElementById("autofill-sub").textContent = fillData.error;
+    document.getElementById("autofill-chooser").classList.remove("hidden");
+    return;
+  }
+
+  document.getElementById("autofill-title").textContent =
+    "Form filled — " + (fillData.portal_label || "portal");
+  document.getElementById("autofill-sub").textContent = fillData.auto_submit
+    ? "The claim is entered and waiting at the submit button. Review and approve to submit."
+    : "Filled on the real site — it will NOT be submitted automatically. Review below.";
+
+  const table = document.getElementById("autofill-review");
+  table.innerHTML = "";
+  (fillData.filled || []).forEach(f => {
+    const tr = document.createElement("tr");
+    tr.innerHTML =
+      `<td class="review-field">${prettyField(f.field)}</td>` +
+      `<td class="review-value">${escapeHtml(f.value)}</td>`;
+    table.appendChild(tr);
+  });
+  if (!(fillData.filled || []).length) {
+    table.innerHTML = `<tr><td colspan="2" class="review-field">No fields could be filled — the page may need login or be multi-step.</td></tr>`;
+  }
+  document.getElementById("btn-confirm-submit").querySelector("span").textContent =
+    fillData.auto_submit ? "Confirm & Submit" : "Mark as filled";
+  document.getElementById("autofill-review-wrap").classList.remove("hidden");
+}
+
+document.getElementById("btn-find-fill").addEventListener("click", () => {
+  const company = document.getElementById("company-input").value.trim();
+  if (!company) { alert("Type a company (e.g. Delta reimbursement)"); return; }
+  runAutofill(company);
+});
+document.getElementById("btn-safe-demo").addEventListener("click", () => runAutofill(""));
+
+/* ── Confirm & Submit (the approval gate → browser clicks submit) ── */
+document.getElementById("btn-confirm-submit").addEventListener("click", async (e) => {
+  const btn = e.currentTarget;
+  btn.disabled = true;
+  btn.querySelector("span").textContent = "Submitting…";
+
+  const res = await fetch("/autofill/submit", { method: "POST" });
+  const data = await res.json();
+
+  if (data.error) {
+    alert("Error: " + data.error);
+    btn.disabled = false;
+    btn.querySelector("span").textContent = "Confirm & Submit";
+    return;
+  }
+
+  // Transition to the confirmation panel with the portal's reference number.
+  document.getElementById("autofill-panel").classList.add("hidden");
   const confirm = document.getElementById("confirmation-panel");
   confirm.classList.remove("hidden");
 
-  const sub = data.claim_package.submit_to;
-  let instrText = "";
-  if (sub) {
-    const method = sub.method || "web_form";
-    const name   = sub.name || "the company";
-    if (method === "email") instrText = `Send the letter below to ${name} at ${sub.address || "their disputes email"}.`;
-    else if (method === "web_form") instrText = `Submit via ${name}'s online portal${sub.form_url ? ": " + sub.form_url : ""}.`;
-    else if (method === "mail") instrText = `Mail the letter to ${name} at ${sub.address}.`;
-    else instrText = `Contact ${name} via ${method}.`;
+  const sub = state.claimPackage?.submit_to;
+  if (data.manual) {
+    // Real portal — filled only, not submitted (we never file a real claim).
+    document.getElementById("confirm-instructions").textContent =
+      data.message || "The form is filled in the browser — review and submit it manually.";
+    document.querySelector("#confirmation-panel .confirm-headline").textContent =
+      "Form Filled — Ready for You";
+  } else {
+    document.getElementById("confirm-instructions").textContent = sub
+      ? `Submitted to ${sub.name || "the portal"}. We'll track this claim and remind you to follow up.`
+      : "Your claim has been submitted. We'll track it and remind you to follow up.";
   }
 
-  document.getElementById("confirm-instructions").textContent = instrText;
+  if (data.reference) {
+    document.getElementById("confirm-reference-wrap").classList.remove("hidden");
+    document.getElementById("confirm-reference").textContent = data.reference;
+  }
+  confirm.scrollIntoView({ behavior: "smooth" });
 });
+
+/* ── Escalate → draft an email to the right authority (manual send) ── */
+document.getElementById("btn-escalate").addEventListener("click", async (e) => {
+  const btn = e.currentTarget;
+  const orig = btn.textContent;
+  btn.textContent = "Drafting…";
+  btn.disabled = true;
+
+  const res = await fetch("/escalate", { method: "POST" });
+  const data = await res.json();
+  btn.textContent = orig;
+  btn.disabled = false;
+  if (data.error) { alert("Error: " + data.error); return; }
+
+  document.getElementById("escalate-authority").textContent =
+    "To authority: " + (data.authority || "the appropriate body");
+  document.getElementById("escalate-to").textContent = data.to || "—";
+  document.getElementById("escalate-subject").textContent = data.subject || "—";
+  document.getElementById("escalate-body").textContent = data.body || "";
+
+  const mailto = "mailto:" + encodeURIComponent(data.to || "") +
+    "?subject=" + encodeURIComponent(data.subject || "") +
+    "&body=" + encodeURIComponent(data.body || "");
+  document.getElementById("btn-escalate-mail").setAttribute("href", mailto);
+
+  const panel = document.getElementById("escalate-panel");
+  panel.classList.remove("hidden");
+  panel.scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("btn-escalate-copy").addEventListener("click", () => {
+  const text = document.getElementById("escalate-body").textContent;
+  copyToClipboard(text, document.getElementById("btn-escalate-copy"));
+});
+
+/* ── field-name / html helpers ── */
+function prettyField(name) {
+  return String(name).replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+}
+function escapeHtml(s) {
+  const d = document.createElement("div");
+  d.textContent = s == null ? "" : String(s);
+  return d.innerHTML;
+}
 
 /* ── Edit More ── */
 document.getElementById("btn-edit-more").addEventListener("click", () => {
@@ -207,6 +403,8 @@ function renderResults(a) {
   uploadSection.classList.add("hidden");
   resultsPanel.classList.remove("hidden");
   document.getElementById("confirmation-panel").classList.add("hidden");
+  document.getElementById("autofill-panel").classList.add("hidden");
+  document.getElementById("escalate-panel").classList.add("hidden");
   document.getElementById("approval-bar").classList.remove("hidden");
 
   // Overview
@@ -285,6 +483,7 @@ function renderResults(a) {
 
 /* ── Loading helpers ── */
 function showLoading(msg) {
+  document.getElementById("start").classList.add("hidden");
   uploadSection.classList.add("hidden");
   resultsPanel.classList.add("hidden");
   loadingState.classList.remove("hidden");
@@ -300,11 +499,18 @@ window.resetApp = function () {
   state.files = [];
   state.analysis = null;
   state.claimPackage = null;
+  state.pendingCompany = "";
   renderFileList();
   pastedText.value = "";
   userContext.value = "";
+  document.getElementById("hero-input").value = "";
   uploadSection.classList.remove("hidden");
+  document.getElementById("start").classList.remove("hidden");
   loadingState.classList.add("hidden");
   resultsPanel.classList.add("hidden");
+  document.getElementById("autofill-panel").classList.add("hidden");
+  document.getElementById("escalate-panel").classList.add("hidden");
+  document.getElementById("confirmation-panel").classList.add("hidden");
+  document.getElementById("confirm-reference-wrap").classList.add("hidden");
   window.scrollTo({ top: 0, behavior: "smooth" });
 };

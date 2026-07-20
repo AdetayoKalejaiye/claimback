@@ -1,0 +1,26 @@
+From: Northwind Airlines <no-reply@northwind-air.com>
+To: jane.doe@email.com
+Date: Sat, 14 Mar 2026 06:12
+Subject: Important: Your flight NW482 has been cancelled
+
+Dear Ms. Jane Doe,
+
+We're sorry to inform you that your flight has been cancelled due to an
+unexpected technical fault with the aircraft.
+
+  Booking reference:  QX7T2P
+  Flight:             NW482
+  Route:              London Heathrow (LHR) → Athens (ATH)
+  Scheduled departure: 14 March 2026, 18:40
+  Status:             CANCELLED
+
+We have automatically rebooked you onto flight NW488 departing the following
+morning, 15 March 2026 at 07:25, arriving Athens 13:10 — an arrival delay of
+approximately 16 hours versus your original itinerary.
+
+As the disruption occurred overnight, you may arrange your own overnight
+accommodation and reasonable meals and retain your receipts.
+
+We apologise for the inconvenience.
+
+Northwind Airlines Customer Care

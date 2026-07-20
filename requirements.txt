@@ -1,7 +1,10 @@
 flask>=3.0.0
-flask-sqlalchemy>=3.1.0
-anthropic>=0.40.0
 python-dotenv>=1.0.0
+playwright>=1.40.0
+# LLM calls go through the local `claude` CLI (Claude Code) using your
+# subscription — no API key needed. Install Claude Code separately:
+#   https://claude.com/product/claude-code
+# Optional OCR (falls back to the CLI reading the file directly if absent):
 pillow>=10.0.0
 pytesseract>=0.3.10
 pdf2image>=1.16.0

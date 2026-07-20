@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyClaim Airlines — Reimbursement Center</title>
+  <style>
+    :root {
+      --sky: #0a4d8c;
+      --sky-dark: #08315a;
+      --accent: #f5a623;
+      --ink: #1c2733;
+      --muted: #6b7784;
+      --line: #d7dee6;
+      --bg: #eef2f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .topbar {
+      background: linear-gradient(90deg, var(--sky-dark), var(--sky));
+      color: #fff;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    }
+    .topbar .mark {
+      font-size: 22px;
+      background: var(--accent);
+      color: var(--sky-dark);
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      display: grid; place-items: center;
+      font-weight: 800;
+    }
+    .topbar h1 { font-size: 17px; margin: 0; font-weight: 700; letter-spacing: .2px; }
+    .topbar .sub { font-size: 12px; opacity: .8; margin-top: 2px; }
+    .breadcrumb {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 28px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .wrap { max-width: 780px; margin: 28px auto; padding: 0 20px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px 30px;
+      box-shadow: 0 4px 20px rgba(10,49,90,.06);
+    }
+    .card h2 { margin: 0 0 4px; font-size: 20px; }
+    .card .lead { color: var(--muted); font-size: 13px; margin: 0 0 22px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: 12px; font-weight: 600; color: var(--ink); }
+    label .req { color: #c0392b; }
+    input, select, textarea {
+      font: inherit;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: var(--ink);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--sky);
+      box-shadow: 0 0 0 3px rgba(10,77,140,.12);
+      background: #fff;
+    }
+    textarea { resize: vertical; min-height: 84px; }
+    .evidence {
+      grid-column: 1 / -1;
+      border: 1.5px dashed var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      background: #fbfcfd;
+    }
+    .actions {
+      margin-top: 26px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+    .btn {
+      font: inherit;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-secondary { background: #eef2f6; color: var(--ink); }
+    .btn-primary { background: var(--sky); color: #fff; }
+    .btn-primary:hover { background: var(--sky-dark); }
+    .note { font-size: 11px; color: var(--muted); margin-top: 14px; }
+
+    /* confirmation */
+    #confirmation { display: none; text-align: center; padding: 24px 10px; }
+    #confirmation .tick {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #2ecc71; color: #fff; font-size: 34px;
+      display: grid; place-items: center; margin: 0 auto 16px;
+    }
+    #confirmation h2 { font-size: 22px; margin: 0 0 6px; }
+    #confirmation p { color: var(--muted); margin: 0 0 18px; }
+    .ref-box {
+      display: inline-block;
+      background: #f0f6ff;
+      border: 1px solid #cfe0f5;
+      border-radius: 10px;
+      padding: 14px 26px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    #reference-number {
+      display: block;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--sky-dark);
+      margin-top: 4px;
+      font-family: "SFMono-Regular", Menlo, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="mark">✈</div>
+    <div>
+      <h1>SkyClaim Airlines</h1>
+      <div class="sub">Passenger Reimbursement Center</div>
+    </div>
+  </div>
+  <div class="breadcrumb">Home / Manage Booking / <strong>Expense Reimbursement Claim</strong></div>
+
+  <div class="wrap">
+    <div class="card">
+      <!-- FORM -->
+      <form id="claim-form" onsubmit="return false;">
+        <h2>Flight Disruption Reimbursement</h2>
+        <p class="lead">Tell us about your disrupted flight and the expenses you incurred. Fields marked <span style="color:#c0392b">*</span> are required.</p>
+
+        <div class="grid">
+          <div class="field">
+            <label for="passenger_name">Passenger name <span class="req">*</span></label>
+            <input type="text" id="passenger_name" name="passenger_name" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="flight_number">Flight number <span class="req">*</span></label>
+            <input type="text" id="flight_number" name="flight_number" placeholder="e.g. SK249" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="route">Route <span class="req">*</span></label>
+            <input type="text" id="route" name="route" placeholder="LHR → JFK" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="flight_date">Date of flight <span class="req">*</span></label>
+            <input type="date" id="flight_date" name="flight_date" />
+          </div>
+          <div class="field">
+            <label for="delay_reason">Reason for disruption <span class="req">*</span></label>
+            <select id="delay_reason" name="delay_reason">
+              <option value="">Select…</option>
+              <option value="technical">Technical / aircraft fault</option>
+              <option value="weather">Weather</option>
+              <option value="staffing">Crew / staffing</option>
+              <option value="extraordinary_circumstances">Extraordinary circumstances</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="expense_total">Total amount claimed <span class="req">*</span></label>
+            <input type="number" id="expense_total" name="expense_total" step="0.01" placeholder="0.00" />
+          </div>
+          <div class="field full">
+            <label for="expense_description">Expense breakdown</label>
+            <textarea id="expense_description" name="expense_description" placeholder="Hotel, meals, ground transport…"></textarea>
+          </div>
+          <div class="field full">
+            <label for="claim_narrative">What happened</label>
+            <textarea id="claim_narrative" name="claim_narrative" placeholder="Briefly describe the disruption and why reimbursement is owed."></textarea>
+          </div>
+          <div class="evidence">
+            📎 Attach supporting evidence (boarding pass, receipts)
+            <input type="file" id="evidence" name="evidence" multiple style="display:block;margin:10px auto 0;" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-secondary">Save draft</button>
+          <button type="submit" id="submit-claim" class="btn btn-primary">Submit claim</button>
+        </div>
+        <p class="note">By submitting, you confirm the information provided is accurate. SkyClaim will review your claim within 21 days.</p>
+      </form>
+
+      <!-- CONFIRMATION (revealed after submit) -->
+      <div id="confirmation">
+        <div class="tick">✓</div>
+        <h2>Claim submitted successfully</h2>
+        <p>We've received your reimbursement request and emailed you a copy.</p>
+        <div class="ref-box">
+          Your claim reference
+          <span id="reference-number">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // The portal mints its own reference on submit, like a real external site.
+    document.getElementById("submit-claim").addEventListener("click", function () {
+      var chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      var ref = "SKY-";
+      for (var i = 0; i < 6; i++) {
+        ref += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("claim-form").style.display = "none";
+      var conf = document.getElementById("confirmation");
+      document.getElementById("reference-number").textContent = ref;
+      conf.style.display = "block";
+    });
+  </script>
+</body>
+</html>

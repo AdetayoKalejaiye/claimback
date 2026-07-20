@@ -1,0 +1,1479 @@
+{
+  "next_id": 20,
+  "claims": [
+    {
+      "id": 1,
+      "status": "error",
+      "created_at": "2026-07-19T18:17:52.739657+00:00",
+      "updated_at": "2026-07-19T18:17:52.778216+00:00",
+      "document_names": [
+        "cancellation_email.txt",
+        "hotel_receipt.txt"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": null,
+      "summary": null,
+      "amount_str": null,
+      "amount_cents": null,
+      "strength": null,
+      "strength_reason": null,
+      "dispute_primary": null,
+      "dispute_steps": [],
+      "dispute_escalation": null,
+      "legal_basis": [],
+      "submit_name": null,
+      "submit_method": null,
+      "submit_address": null,
+      "submit_form_url": null,
+      "draft_letter": null,
+      "raw_analysis": null,
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null
+    },
+    {
+      "id": 2,
+      "status": "error",
+      "created_at": "2026-07-19T18:19:58.401992+00:00",
+      "updated_at": "2026-07-19T18:19:58.406213+00:00",
+      "document_names": [
+        "cancellation_email.txt",
+        "hotel_receipt.txt"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": null,
+      "summary": null,
+      "amount_str": null,
+      "amount_cents": null,
+      "strength": null,
+      "strength_reason": null,
+      "dispute_primary": null,
+      "dispute_steps": [],
+      "dispute_escalation": null,
+      "legal_basis": [],
+      "submit_name": null,
+      "submit_method": null,
+      "submit_address": null,
+      "submit_form_url": null,
+      "draft_letter": null,
+      "raw_analysis": null,
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null
+    },
+    {
+      "id": 3,
+      "status": "analyzed",
+      "created_at": "2026-07-19T18:29:06.956900+00:00",
+      "updated_at": "2026-07-19T18:29:53.084905+00:00",
+      "document_names": [
+        "cancellation_email.txt",
+        "hotel_receipt.txt"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty-of-care expense reimbursement",
+      "summary": "Jane Doe's Northwind flight NW482 (London Heathrow → Athens) was cancelled the night before departure due to a technical fault, and she was rebooked onto a flight arriving ~16 hours late, incurring £182.50 in overnight hotel and meal costs.",
+      "amount_str": "£532.50 (£350 UK261 compensation + £182.50 expenses)",
+      "amount_cents": null,
+      "strength": "Strong",
+      "strength_reason": "£350 — 1,500–3,500 km flight (LHR–ATH ≈ 2,400 km), cancellation notified same day (<14 days), rebooked arrival delay ~16h (well over 3h). The airline's stated cause is a routine aircraft technical fault, which settled case law (Wallentin-Hermann, van der Lans) holds is NOT an extraordinary circumstance, so statutory compensation is owed. Duty-of-care expenses are owed regardless of cause and the airline expressly invited receipts, making the £182.50 reimbursement near-certain.",
+      "dispute_primary": "Direct written claim to Northwind Airlines Customer Care citing UK261, demanding both statutory compensation and expense reimbursement",
+      "dispute_steps": [
+        "Send the claim letter below to Northwind Airlines with the cancellation email and hotel receipt attached",
+        "Keep proof of submission and allow the airline a reasonable period (typically up to 8 weeks) to respond",
+        "If they deny compensation as 'extraordinary circumstances,' demand documentary proof of the technical fault and its cause",
+        "Track the deadline: UK261 claims can generally be pursued for up to 6 years in England"
+      ],
+      "dispute_escalation": "If Northwind refuses or fails to respond within 8 weeks, escalate to the airline's approved Alternative Dispute Resolution (ADR) body (e.g. CEDR or AviationADR); if Northwind is not in an ADR scheme, complain to the UK Civil Aviation Authority (CAA) Passenger Advice and Complaints Team (PACT). As a last resort, file a Money Claim Online (small claims) in the County Court.",
+      "legal_basis": [
+        "Regulation (EC) No 261/2004 as retained in UK law ('UK261') — applies because the flight departed from a UK airport (London Heathrow)",
+        "UK261 Article 5 & 7 — fixed compensation for cancellation notified less than 14 days before departure",
+        "UK261 Article 9 — right to care (accommodation, meals, transport) during disruption",
+        "Wallentin-Hermann v Alitalia (C-549/07) — technical/mechanical faults inherent in normal operation of an aircraft do NOT constitute 'extraordinary circumstances'",
+        "van der Lans v KLM (C-257/14) — unexpected technical problems are generally not extraordinary circumstances"
+      ],
+      "submit_name": "Northwind Airlines Customer Care",
+      "submit_method": "email",
+      "submit_address": "Reply to the cancellation notice / Customer Care (no-reply@northwind-air.com is unmonitored — use Northwind's official customer-relations claim address or online claim form). Escalation: UK Civil Aviation Authority PACT.",
+      "submit_form_url": null,
+      "draft_letter": "To: Northwind Airlines Customer Care\nFrom: Jane Doe (jane.doe@email.com)\nBooking reference: QX7T2P\nFlight: NW482, London Heathrow (LHR) → Athens (ATH), 14 March 2026\n\nSubject: Claim for compensation and expenses under UK261 — Flight NW482 cancellation\n\nDear Northwind Airlines,\n\nI am writing to claim statutory compensation and reimbursement of expenses following the cancellation of flight NW482 (LHR→ATH), scheduled to depart on 14 March 2026 at 18:40.\n\nYou notified me of the cancellation by email on the morning of 14 March 2026 — the same day as departure, well within 14 days. You rebooked me onto flight NW488 arriving Athens at 13:10 on 15 March 2026, approximately 16 hours later than my original scheduled arrival.\n\n1. Compensation. Under Regulation (EC) No 261/2004 as retained in UK law, a cancellation notified fewer than 14 days before departure entitles me to fixed compensation of £350 for this flight (distance 1,500–3,500 km), given the rebooked arrival delay of more than three hours. Your email attributes the cancellation to 'an unexpected technical fault with the aircraft.' Established case law (Wallentin-Hermann v Alitalia, C-549/07; van der Lans v KLM, C-257/14) confirms that technical faults inherent in the normal operation of an aircraft are NOT 'extraordinary circumstances' and therefore do not exempt the airline from paying compensation. I accordingly claim £350.\n\n2. Expenses (duty of care). Under Article 9, you owe me accommodation, meals and transport during the overnight disruption, and your email expressly invited me to retain receipts. I incurred the following, evidenced by the attached Heathrow Plaza Hotel receipt (paid on card ending 4471):\n   - Overnight room: £128.00\n   - Dinner: £22.50\n   - Breakfast: £14.00\n   - Airport transfer (taxi): £18.00\n   Total expenses: £182.50\n\nTotal amount claimed: £532.50 (£350 compensation + £182.50 expenses).\n\nPlease pay this sum within 14 days by bank transfer or to my original payment method. If you decline the compensation on 'extraordinary circumstances' grounds, please provide full documentary evidence of the technical fault and why it could not have been avoided. Absent such proof, I will escalate to the relevant ADR body or the UK Civil Aviation Authority, and reserve the right to pursue the matter in the County Court.\n\nAttachments: cancellation email (14 March 2026); Heathrow Plaza Hotel receipt (HPX-559102).\n\nYours faithfully,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty-of-care expense reimbursement",
+        "summary": "Jane Doe's Northwind flight NW482 (London Heathrow → Athens) was cancelled the night before departure due to a technical fault, and she was rebooked onto a flight arriving ~16 hours late, incurring £182.50 in overnight hotel and meal costs.",
+        "amount_at_stake": "£532.50 (£350 UK261 compensation + £182.50 expenses)",
+        "what_happened": "On 14 March 2026 at 06:12, Northwind Airlines emailed Jane Doe that flight NW482 (LHR→ATH, scheduled departure 18:40 same day) was cancelled due to 'an unexpected technical fault with the aircraft.' She was automatically rebooked onto NW488 departing 15 March at 07:25, arriving Athens 13:10 — an arrival delay of approximately 16 hours versus the original itinerary. Because the disruption ran overnight, the airline told her to arrange her own accommodation and meals and keep receipts. She stayed at the Heathrow Plaza Hotel and paid £182.50 total: £128.00 room, £22.50 dinner, £14.00 breakfast, and £18.00 airport taxi (card ending 4471).",
+        "legal_basis": [
+          "Regulation (EC) No 261/2004 as retained in UK law ('UK261') — applies because the flight departed from a UK airport (London Heathrow)",
+          "UK261 Article 5 & 7 — fixed compensation for cancellation notified less than 14 days before departure",
+          "UK261 Article 9 — right to care (accommodation, meals, transport) during disruption",
+          "Wallentin-Hermann v Alitalia (C-549/07) — technical/mechanical faults inherent in normal operation of an aircraft do NOT constitute 'extraordinary circumstances'",
+          "van der Lans v KLM (C-257/14) — unexpected technical problems are generally not extraordinary circumstances"
+        ],
+        "strength": "Strong",
+        "strength_reason": "£350 — 1,500–3,500 km flight (LHR–ATH ≈ 2,400 km), cancellation notified same day (<14 days), rebooked arrival delay ~16h (well over 3h). The airline's stated cause is a routine aircraft technical fault, which settled case law (Wallentin-Hermann, van der Lans) holds is NOT an extraordinary circumstance, so statutory compensation is owed. Duty-of-care expenses are owed regardless of cause and the airline expressly invited receipts, making the £182.50 reimbursement near-certain.",
+        "dispute_path": {
+          "primary": "Direct written claim to Northwind Airlines Customer Care citing UK261, demanding both statutory compensation and expense reimbursement",
+          "steps": [
+            "Send the claim letter below to Northwind Airlines with the cancellation email and hotel receipt attached",
+            "Keep proof of submission and allow the airline a reasonable period (typically up to 8 weeks) to respond",
+            "If they deny compensation as 'extraordinary circumstances,' demand documentary proof of the technical fault and its cause",
+            "Track the deadline: UK261 claims can generally be pursued for up to 6 years in England"
+          ],
+          "escalation": "If Northwind refuses or fails to respond within 8 weeks, escalate to the airline's approved Alternative Dispute Resolution (ADR) body (e.g. CEDR or AviationADR); if Northwind is not in an ADR scheme, complain to the UK Civil Aviation Authority (CAA) Passenger Advice and Complaints Team (PACT). As a last resort, file a Money Claim Online (small claims) in the County Court."
+        },
+        "missing_evidence": [
+          "Northwind's operating carrier nationality (confirms UK261 basis, though UK departure alone suffices)",
+          "Original booking confirmation / proof of payment for the ticket",
+          "Boarding pass or proof Jane actually travelled on the rebooked flight NW488"
+        ],
+        "questions": [
+          "Did you travel on the rebooked flight NW488, or did you make other arrangements?",
+          "Have you already contacted Northwind about this, and if so what did they say?",
+          "Was this flight part of a connecting itinerary or a return trip that was also affected?"
+        ],
+        "draft_letter": "To: Northwind Airlines Customer Care\nFrom: Jane Doe (jane.doe@email.com)\nBooking reference: QX7T2P\nFlight: NW482, London Heathrow (LHR) → Athens (ATH), 14 March 2026\n\nSubject: Claim for compensation and expenses under UK261 — Flight NW482 cancellation\n\nDear Northwind Airlines,\n\nI am writing to claim statutory compensation and reimbursement of expenses following the cancellation of flight NW482 (LHR→ATH), scheduled to depart on 14 March 2026 at 18:40.\n\nYou notified me of the cancellation by email on the morning of 14 March 2026 — the same day as departure, well within 14 days. You rebooked me onto flight NW488 arriving Athens at 13:10 on 15 March 2026, approximately 16 hours later than my original scheduled arrival.\n\n1. Compensation. Under Regulation (EC) No 261/2004 as retained in UK law, a cancellation notified fewer than 14 days before departure entitles me to fixed compensation of £350 for this flight (distance 1,500–3,500 km), given the rebooked arrival delay of more than three hours. Your email attributes the cancellation to 'an unexpected technical fault with the aircraft.' Established case law (Wallentin-Hermann v Alitalia, C-549/07; van der Lans v KLM, C-257/14) confirms that technical faults inherent in the normal operation of an aircraft are NOT 'extraordinary circumstances' and therefore do not exempt the airline from paying compensation. I accordingly claim £350.\n\n2. Expenses (duty of care). Under Article 9, you owe me accommodation, meals and transport during the overnight disruption, and your email expressly invited me to retain receipts. I incurred the following, evidenced by the attached Heathrow Plaza Hotel receipt (paid on card ending 4471):\n   - Overnight room: £128.00\n   - Dinner: £22.50\n   - Breakfast: £14.00\n   - Airport transfer (taxi): £18.00\n   Total expenses: £182.50\n\nTotal amount claimed: £532.50 (£350 compensation + £182.50 expenses).\n\nPlease pay this sum within 14 days by bank transfer or to my original payment method. If you decline the compensation on 'extraordinary circumstances' grounds, please provide full documentary evidence of the technical fault and why it could not have been avoided. Absent such proof, I will escalate to the relevant ADR body or the UK Civil Aviation Authority, and reserve the right to pursue the matter in the County Court.\n\nAttachments: cancellation email (14 March 2026); Heathrow Plaza Hotel receipt (HPX-559102).\n\nYours faithfully,\nJane Doe",
+        "submit_to": {
+          "name": "Northwind Airlines Customer Care",
+          "method": "email",
+          "address": "Reply to the cancellation notice / Customer Care (no-reply@northwind-air.com is unmonitored — use Northwind's official customer-relations claim address or online claim form). Escalation: UK Civil Aviation Authority PACT.",
+          "form_url": null
+        },
+        "ready_to_submit": true
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null
+    },
+    {
+      "id": 4,
+      "status": "submitted",
+      "created_at": "2026-07-19T18:35:48.558653+00:00",
+      "updated_at": "2026-07-19T18:38:35.972089+00:00",
+      "document_names": [
+        "cancellation_email.txt",
+        "hotel_receipt.txt"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty-of-care expense reimbursement",
+      "summary": "Northwind Airlines cancelled Jane Doe's LHR→Athens flight NW482 the night before departure due to a technical fault, rebooking her onto a flight arriving ~16 hours late; she also paid out of pocket for a hotel and meals.",
+      "amount_str": "£532.50 (£350 statutory compensation + £182.50 expenses)",
+      "amount_cents": null,
+      "strength": "Strong",
+      "strength_reason": "£350 — 1,500–3,500 km flight (LHR–ATH ≈ 2,400 km), arrival delay ~16h (well over 3h), cancellation notified <14 days before departure. The airline's own email admits the cause was a 'technical fault,' which established case law (Wallentin-Hermann, van der Lans) holds is NOT an extraordinary circumstance, so the airline cannot escape compensation. Duty-of-care expenses are fully documented with an itemised receipt. Liability is admitted in writing.",
+      "dispute_primary": "Written claim directly to Northwind Airlines Customer Care citing UK261, demanding £350 compensation plus £182.50 expenses",
+      "dispute_steps": [
+        "Send the claim letter (below) to Northwind Airlines Customer Care by email/complaints form, attaching the cancellation email and the itemised hotel receipt.",
+        "Give the airline a firm deadline (14 days) to pay both the £350 statutory compensation and the £182.50 expenses.",
+        "Keep proof of submission and all correspondence.",
+        "If they refuse or invoke 'extraordinary circumstances,' reply rebutting with Wallentin-Hermann/van der Lans and their own written admission it was a technical fault."
+      ],
+      "dispute_escalation": "If Northwind rejects or ignores the claim, escalate free of charge to the airline's ADR scheme or, if it is not an ADR member, to the UK Civil Aviation Authority (CAA) Passenger Advice and Complaints Team (PACT). As a last resort, file a small claim in the County Court (Money Claim Online) — the sums are well within the small-claims track.",
+      "legal_basis": [
+        "Retained Regulation (EC) No 261/2004 ('UK261'), Article 5 (cancellation) and Article 7 (fixed compensation)",
+        "UK261 Article 7 — £350 for a flight of 1,500–3,500 km (LHR–ATH ≈ 2,400 km)",
+        "UK261 Article 9 — right to care (accommodation, meals, transport between airport and hotel)",
+        "Wallentin-Hermann v Alitalia (C-549/07) and van der Lans v KLM (C-257/14): ordinary technical faults are inherent in normal airline operations and do NOT constitute 'extraordinary circumstances'",
+        "Cancellation notified <14 days before departure, so no exemption from compensation under Article 5(1)(c)"
+      ],
+      "submit_name": "Northwind Airlines Customer Care",
+      "submit_method": "email",
+      "submit_address": "Reply to the cancellation notice (no-reply@northwind-air.com is not monitored — use Northwind's official Customer Care / complaints email or online complaints form)",
+      "submit_form_url": null,
+      "draft_letter": "To: Northwind Airlines Customer Care\nSubject: Claim for UK261 compensation and expense reimbursement — Flight NW482, Booking QX7T2P\n\nDear Northwind Airlines,\n\nI am writing to claim compensation and expense reimbursement following the cancellation of flight NW482 (London Heathrow → Athens), scheduled to depart on 14 March 2026 at 18:40, under booking reference QX7T2P.\n\nYou cancelled this flight and rebooked me onto flight NW488 the following morning, arriving Athens on 15 March 2026 at 13:10 — an arrival delay of approximately 16 hours. Your cancellation email of 14 March 2026 stated the cause was 'an unexpected technical fault with the aircraft.'\n\n1. Statutory compensation — £350\nUnder Article 5 and Article 7 of retained Regulation (EC) No 261/2004 (UK261), I am entitled to £350 in fixed compensation. The flight distance (London Heathrow to Athens, approximately 2,400 km) falls within the 1,500–3,500 km band, the cancellation was notified fewer than 14 days before departure, and my arrival was delayed far more than three hours.\n\nA routine technical fault does not amount to 'extraordinary circumstances.' The Court of Justice has confirmed in Wallentin-Hermann v Alitalia (C-549/07) and van der Lans v KLM (C-257/14) that technical problems inherent in the normal operation of an aircraft do not exempt an airline from paying compensation. Accordingly, £350 is due.\n\n2. Expense reimbursement (duty of care) — £182.50\nUnder Article 9 of UK261 you were obliged to provide accommodation, meals and transport during the overnight disruption. As you instructed me to arrange these myself and retain receipts, I claim reimbursement of £182.50, itemised as follows:\n  • Overnight room (The Heathrow Plaza Hotel) — £128.00\n  • Dinner — £22.50\n  • Breakfast — £14.00\n  • Airport transfer (taxi) — £18.00\n  Total: £182.50 (paid on card ending 4471; receipt confirmation HPX-559102, attached).\n\nTotal claimed: £532.50.\n\nPlease pay this amount to me within 14 days of the date of this letter. If you do not, I will escalate my complaint to your Alternative Dispute Resolution body or the UK Civil Aviation Authority, and may issue a claim in the County Court without further notice.\n\nI attach your cancellation email and the itemised hotel receipt. I look forward to your prompt response.\n\nYours faithfully,\nJane Doe\njane.doe@email.com\nBooking reference: QX7T2P",
+      "raw_analysis": {
+        "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty-of-care expense reimbursement",
+        "summary": "Northwind Airlines cancelled Jane Doe's LHR→Athens flight NW482 the night before departure due to a technical fault, rebooking her onto a flight arriving ~16 hours late; she also paid out of pocket for a hotel and meals.",
+        "amount_at_stake": "£532.50 (£350 statutory compensation + £182.50 expenses)",
+        "what_happened": "Flight NW482 (London Heathrow → Athens), scheduled 14 March 2026 18:40, was cancelled with less than 14 days' notice. Northwind stated the cause was 'an unexpected technical fault with the aircraft.' Jane was automatically rebooked onto NW488 the next morning, arriving Athens 15 March at 13:10 — an arrival delay of approximately 16 hours. Because the disruption occurred overnight, the airline told her to arrange her own accommodation and meals and keep receipts. She paid £182.50 at the Heathrow Plaza Hotel (£128.00 room, £22.50 dinner, £14.00 breakfast, £18.00 airport transfer). Two separate entitlements arise: (1) fixed statutory cancellation compensation under UK261, and (2) reimbursement of duty-of-care expenses.",
+        "legal_basis": [
+          "Retained Regulation (EC) No 261/2004 ('UK261'), Article 5 (cancellation) and Article 7 (fixed compensation)",
+          "UK261 Article 7 — £350 for a flight of 1,500–3,500 km (LHR–ATH ≈ 2,400 km)",
+          "UK261 Article 9 — right to care (accommodation, meals, transport between airport and hotel)",
+          "Wallentin-Hermann v Alitalia (C-549/07) and van der Lans v KLM (C-257/14): ordinary technical faults are inherent in normal airline operations and do NOT constitute 'extraordinary circumstances'",
+          "Cancellation notified <14 days before departure, so no exemption from compensation under Article 5(1)(c)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "£350 — 1,500–3,500 km flight (LHR–ATH ≈ 2,400 km), arrival delay ~16h (well over 3h), cancellation notified <14 days before departure. The airline's own email admits the cause was a 'technical fault,' which established case law (Wallentin-Hermann, van der Lans) holds is NOT an extraordinary circumstance, so the airline cannot escape compensation. Duty-of-care expenses are fully documented with an itemised receipt. Liability is admitted in writing.",
+        "dispute_path": {
+          "primary": "Written claim directly to Northwind Airlines Customer Care citing UK261, demanding £350 compensation plus £182.50 expenses",
+          "steps": [
+            "Send the claim letter (below) to Northwind Airlines Customer Care by email/complaints form, attaching the cancellation email and the itemised hotel receipt.",
+            "Give the airline a firm deadline (14 days) to pay both the £350 statutory compensation and the £182.50 expenses.",
+            "Keep proof of submission and all correspondence.",
+            "If they refuse or invoke 'extraordinary circumstances,' reply rebutting with Wallentin-Hermann/van der Lans and their own written admission it was a technical fault."
+          ],
+          "escalation": "If Northwind rejects or ignores the claim, escalate free of charge to the airline's ADR scheme or, if it is not an ADR member, to the UK Civil Aviation Authority (CAA) Passenger Advice and Complaints Team (PACT). As a last resort, file a small claim in the County Court (Money Claim Online) — the sums are well within the small-claims track."
+        },
+        "missing_evidence": [],
+        "questions": [
+          "Was this a one-way or return booking, and were you travelling alone or with others on the same reference (each passenger is owed their own £350)?",
+          "Has Northwind already refunded or offered anything (e.g. compensation, expense payment, or vouchers)?"
+        ],
+        "draft_letter": "To: Northwind Airlines Customer Care\nSubject: Claim for UK261 compensation and expense reimbursement — Flight NW482, Booking QX7T2P\n\nDear Northwind Airlines,\n\nI am writing to claim compensation and expense reimbursement following the cancellation of flight NW482 (London Heathrow → Athens), scheduled to depart on 14 March 2026 at 18:40, under booking reference QX7T2P.\n\nYou cancelled this flight and rebooked me onto flight NW488 the following morning, arriving Athens on 15 March 2026 at 13:10 — an arrival delay of approximately 16 hours. Your cancellation email of 14 March 2026 stated the cause was 'an unexpected technical fault with the aircraft.'\n\n1. Statutory compensation — £350\nUnder Article 5 and Article 7 of retained Regulation (EC) No 261/2004 (UK261), I am entitled to £350 in fixed compensation. The flight distance (London Heathrow to Athens, approximately 2,400 km) falls within the 1,500–3,500 km band, the cancellation was notified fewer than 14 days before departure, and my arrival was delayed far more than three hours.\n\nA routine technical fault does not amount to 'extraordinary circumstances.' The Court of Justice has confirmed in Wallentin-Hermann v Alitalia (C-549/07) and van der Lans v KLM (C-257/14) that technical problems inherent in the normal operation of an aircraft do not exempt an airline from paying compensation. Accordingly, £350 is due.\n\n2. Expense reimbursement (duty of care) — £182.50\nUnder Article 9 of UK261 you were obliged to provide accommodation, meals and transport during the overnight disruption. As you instructed me to arrange these myself and retain receipts, I claim reimbursement of £182.50, itemised as follows:\n  • Overnight room (The Heathrow Plaza Hotel) — £128.00\n  • Dinner — £22.50\n  • Breakfast — £14.00\n  • Airport transfer (taxi) — £18.00\n  Total: £182.50 (paid on card ending 4471; receipt confirmation HPX-559102, attached).\n\nTotal claimed: £532.50.\n\nPlease pay this amount to me within 14 days of the date of this letter. If you do not, I will escalate my complaint to your Alternative Dispute Resolution body or the UK Civil Aviation Authority, and may issue a claim in the County Court without further notice.\n\nI attach your cancellation email and the itemised hotel receipt. I look forward to your prompt response.\n\nYours faithfully,\nJane Doe\njane.doe@email.com\nBooking reference: QX7T2P",
+        "submit_to": {
+          "name": "Northwind Airlines Customer Care",
+          "method": "email",
+          "address": "Reply to the cancellation notice (no-reply@northwind-air.com is not monitored — use Northwind's official Customer Care / complaints email or online complaints form)",
+          "form_url": null
+        },
+        "ready_to_submit": true
+      },
+      "submission_reference": "SKY-6NWFE5",
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (cancellation_email.txt):\nFrom: Northwind Airlines <no-reply@northwind-air.com>\nTo: jane.doe@email.com\nDate: Sat, 14 Mar 2026 06:12\nSubject: Important: Your flight NW482 has been cancelled\n\nDear Ms. Jane Doe,\n\nWe're sorry to inform you that your flight has been cancelled due to an\nunexpected technical fault with the aircraft.\n\n  Booking reference:  QX7T2P\n  Flight:             NW482\n  Route:              London Heathrow (LHR) → Athens (ATH)\n  Scheduled departure: 14 March 2026, 18:40\n  Status:             CANCELLED\n\nWe have automatically rebooked you onto flight NW488 departing the following\nmorning, 15 March 2026 at 07:25, arriving Athens 13:10 — an arrival delay of\napproximately 16 hours versus your original itinerary.\n\nAs the disruption occurred overnight, you may arrange your own overnight\naccommodation and reasonable meals and retain your receipts.\n\nWe apologise for the inconvenience.\n\nNorthwind Airlines Customer Care\n\n\nDocument (hotel_receipt.txt):\nTHE HEATHROW PLAZA HOTEL\nBath Road, Hounslow, London TW6 2AQ\n\nGUEST FOLIO / RECEIPT\n------------------------------------------------\nGuest name:      Jane Doe\nRoom:            412 (1 night)\nCheck-in:        14 Mar 2026  21:50\nCheck-out:       15 Mar 2026  05:30\nConfirmation:    HPX-559102\n------------------------------------------------\nOvernight room rate .......................  £128.00\nRestaurant (dinner) .......................   £22.50\nBreakfast .................................   £14.00\nAirport transfer (taxi) ...................   £18.00\n------------------------------------------------\nTOTAL PAID (card ****4471) ................  £182.50\n\nThank you for staying with us.\n\n\nAdditional context: Flight was cancelled the night before departure; I had to pay for a hotel and meals.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      }
+    },
+    {
+      "id": 5,
+      "status": "analyzed",
+      "created_at": "2026-07-19T19:18:23.906368+00:00",
+      "updated_at": "2026-07-19T19:19:07.545415+00:00",
+      "document_names": [
+        "cancellation_email.txt",
+        "hotel_receipt.txt"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty of care (expense reimbursement)",
+      "summary": "Northwind Airlines cancelled Jane Doe's LHR→Athens flight NW482 the night before departure due to a technical fault, rebooking her onto a flight arriving ~16 hours late. She is owed fixed statutory compensation plus reimbursement of her overnight hotel and meal expenses.",
+      "amount_str": "£532.50 (£350 statutory compensation + £182.50 expenses)",
+      "amount_cents": null,
+      "strength": "Strong",
+      "strength_reason": "£350 owed — LHR→ATH is ~2,400 km (1,500–3,500 km band), rebooked arrival delay ~16h (well over 3h), and cancellation notice given under 14 days. The airline's own email cites a 'technical fault,' which under established case law (Wallentin-Hermann) is not an extraordinary circumstance, so the compensation defence is very weak. Duty-of-care expenses (£182.50) are separately owed regardless of cause and are documented with a receipt. Note: under the equivalent EU261 EUR scale this band is €400; the UK261 GBP figure of £350 applies because the flight departed the UK.",
+      "dispute_primary": "Direct written claim to Northwind Airlines Customer Care citing UK261",
+      "dispute_steps": [
+        "Submit the claim letter below to Northwind Airlines, attaching the cancellation email and the hotel receipt.",
+        "Demand both the £350 statutory compensation AND £182.50 duty-of-care reimbursement as separate line items.",
+        "Keep a dated copy of all correspondence and note the airline's 14-day response deadline.",
+        "If refused on 'extraordinary circumstances' grounds, request their written evidence that the technical fault was unforeseeable and beyond their control."
+      ],
+      "dispute_escalation": "If Northwind rejects or ignores the claim, escalate to the UK Civil Aviation Authority (CAA) via its Passenger Advice and Complaints Team (PACT), or to the airline's approved Alternative Dispute Resolution (ADR) body (e.g. CEDR or AviationADR). As a final step you may issue a claim in the small claims track of the county court (England & Wales), where such UK261 claims are commonly upheld.",
+      "legal_basis": [
+        "UK Regulation (EC) No 261/2004 (retained/assimilated as 'UK261'), Article 5 — cancellation rights (flight departed the UK from London Heathrow)",
+        "UK261 Article 7 — fixed compensation: £350 for flights of 1,500–3,500 km where the rebooked arrival delay exceeds 3 hours and notice was under 14 days",
+        "UK261 Article 9 — right to care (accommodation, meals, transport) during disruption",
+        "CJEU C-549/07 (Wallentin-Hermann) — technical/mechanical faults are inherent to normal airline operations and generally do NOT qualify as 'extraordinary circumstances'"
+      ],
+      "submit_name": "Northwind Airlines Customer Care",
+      "submit_method": "email",
+      "submit_address": "Reply to the airline's Customer Care team (the cancellation was sent from a no-reply address: no-reply@northwind-air.com — use the official customer-relations/complaints email or web claim form listed on northwind-air.com, as no-reply is not monitored).",
+      "submit_form_url": null,
+      "draft_letter": "To: Northwind Airlines Customer Care\n\nSubject: UK261 Compensation and Expense Reimbursement Claim — Flight NW482, Booking QX7T2P\n\nDear Northwind Airlines,\n\nI am writing to claim compensation and reimbursement following the cancellation of flight NW482 (London Heathrow LHR → Athens ATH), scheduled to depart on 14 March 2026 at 18:40, under booking reference QX7T2P.\n\nYou cancelled this flight and notified me on the day of departure, rebooking me onto flight NW488 the following morning (15 March 2026), which arrived in Athens at approximately 13:10 — an arrival delay of around 16 hours versus my original itinerary.\n\n1. Statutory compensation — £350\nUnder UK Regulation (EC) No 261/2004, Articles 5 and 7, I am entitled to fixed compensation of £350. The flight distance (London Heathrow to Athens, approximately 2,400 km) falls within the 1,500–3,500 km band; the cancellation was notified less than 14 days before departure; and my rebooked arrival was delayed by well over three hours.\n\nYour email attributes the cancellation to 'an unexpected technical fault with the aircraft.' Technical and mechanical faults are inherent to the normal exercise of an air carrier's activity and do not constitute 'extraordinary circumstances' under the Regulation (see CJEU C-549/07, Wallentin-Hermann). Compensation is therefore due.\n\n2. Duty of care — £182.50\nUnder Article 9, you owed me a right to care during the overnight disruption. As instructed in your email, I arranged my own accommodation and meals and retained the receipt. I claim reimbursement of £182.50, itemised as: overnight room £128.00, dinner £22.50, breakfast £14.00, and airport taxi £18.00. The hotel receipt is enclosed.\n\nTotal claimed: £532.50.\n\nPlease remit payment to my original payment method within 14 days. If you decline, please provide your full written reasons together with any evidence relied upon. Failing a satisfactory resolution, I will escalate to the UK Civil Aviation Authority / an approved ADR body and, if necessary, pursue the matter through the county court.\n\nEnclosures: cancellation email (14 March 2026); Heathrow Plaza Hotel receipt (conf. HPX-559102).\n\nYours faithfully,\nJane Doe\njane.doe@email.com\nBooking reference: QX7T2P",
+      "raw_analysis": {
+        "claim_type": "Airline flight cancellation — UK261 statutory compensation + duty of care (expense reimbursement)",
+        "summary": "Northwind Airlines cancelled Jane Doe's LHR→Athens flight NW482 the night before departure due to a technical fault, rebooking her onto a flight arriving ~16 hours late. She is owed fixed statutory compensation plus reimbursement of her overnight hotel and meal expenses.",
+        "amount_at_stake": "£532.50 (£350 statutory compensation + £182.50 expenses)",
+        "what_happened": "Flight NW482 (London Heathrow → Athens), scheduled to depart 14 March 2026 at 18:40, was cancelled by Northwind Airlines. Notice was given on the day of departure (well under the 14-day threshold). The airline attributed the cancellation to 'an unexpected technical fault with the aircraft' and rebooked Jane onto flight NW488 the next morning, arriving Athens 13:10 on 15 March — an arrival delay of approximately 16 hours. Because the disruption was overnight, Jane arranged her own accommodation and meals, paying £182.50 (room £128.00, dinner £22.50, breakfast £14.00, airport taxi £18.00) at The Heathrow Plaza Hotel, retaining the receipt.",
+        "legal_basis": [
+          "UK Regulation (EC) No 261/2004 (retained/assimilated as 'UK261'), Article 5 — cancellation rights (flight departed the UK from London Heathrow)",
+          "UK261 Article 7 — fixed compensation: £350 for flights of 1,500–3,500 km where the rebooked arrival delay exceeds 3 hours and notice was under 14 days",
+          "UK261 Article 9 — right to care (accommodation, meals, transport) during disruption",
+          "CJEU C-549/07 (Wallentin-Hermann) — technical/mechanical faults are inherent to normal airline operations and generally do NOT qualify as 'extraordinary circumstances'"
+        ],
+        "strength": "Strong",
+        "strength_reason": "£350 owed — LHR→ATH is ~2,400 km (1,500–3,500 km band), rebooked arrival delay ~16h (well over 3h), and cancellation notice given under 14 days. The airline's own email cites a 'technical fault,' which under established case law (Wallentin-Hermann) is not an extraordinary circumstance, so the compensation defence is very weak. Duty-of-care expenses (£182.50) are separately owed regardless of cause and are documented with a receipt. Note: under the equivalent EU261 EUR scale this band is €400; the UK261 GBP figure of £350 applies because the flight departed the UK.",
+        "dispute_path": {
+          "primary": "Direct written claim to Northwind Airlines Customer Care citing UK261",
+          "steps": [
+            "Submit the claim letter below to Northwind Airlines, attaching the cancellation email and the hotel receipt.",
+            "Demand both the £350 statutory compensation AND £182.50 duty-of-care reimbursement as separate line items.",
+            "Keep a dated copy of all correspondence and note the airline's 14-day response deadline.",
+            "If refused on 'extraordinary circumstances' grounds, request their written evidence that the technical fault was unforeseeable and beyond their control."
+          ],
+          "escalation": "If Northwind rejects or ignores the claim, escalate to the UK Civil Aviation Authority (CAA) via its Passenger Advice and Complaints Team (PACT), or to the airline's approved Alternative Dispute Resolution (ADR) body (e.g. CEDR or AviationADR). As a final step you may issue a claim in the small claims track of the county court (England & Wales), where such UK261 claims are commonly upheld."
+        },
+        "missing_evidence": [
+          "Confirmation of what (if anything) Northwind has already refunded or paid so amounts aren't double-counted",
+          "Proof the rebooked flight NW488 actually operated/arrived at 13:10 on 15 March (boarding pass or arrival confirmation) to lock in the delay duration"
+        ],
+        "questions": [
+          "Was this a direct booking with Northwind or through a travel agent / third-party site?",
+          "Has Northwind offered or paid you anything already (voucher, partial refund, compensation)?",
+          "Did the rebooked flight NW488 arrive roughly on time (~13:10 on 15 March), confirming the ~16h delay?"
+        ],
+        "draft_letter": "To: Northwind Airlines Customer Care\n\nSubject: UK261 Compensation and Expense Reimbursement Claim — Flight NW482, Booking QX7T2P\n\nDear Northwind Airlines,\n\nI am writing to claim compensation and reimbursement following the cancellation of flight NW482 (London Heathrow LHR → Athens ATH), scheduled to depart on 14 March 2026 at 18:40, under booking reference QX7T2P.\n\nYou cancelled this flight and notified me on the day of departure, rebooking me onto flight NW488 the following morning (15 March 2026), which arrived in Athens at approximately 13:10 — an arrival delay of around 16 hours versus my original itinerary.\n\n1. Statutory compensation — £350\nUnder UK Regulation (EC) No 261/2004, Articles 5 and 7, I am entitled to fixed compensation of £350. The flight distance (London Heathrow to Athens, approximately 2,400 km) falls within the 1,500–3,500 km band; the cancellation was notified less than 14 days before departure; and my rebooked arrival was delayed by well over three hours.\n\nYour email attributes the cancellation to 'an unexpected technical fault with the aircraft.' Technical and mechanical faults are inherent to the normal exercise of an air carrier's activity and do not constitute 'extraordinary circumstances' under the Regulation (see CJEU C-549/07, Wallentin-Hermann). Compensation is therefore due.\n\n2. Duty of care — £182.50\nUnder Article 9, you owed me a right to care during the overnight disruption. As instructed in your email, I arranged my own accommodation and meals and retained the receipt. I claim reimbursement of £182.50, itemised as: overnight room £128.00, dinner £22.50, breakfast £14.00, and airport taxi £18.00. The hotel receipt is enclosed.\n\nTotal claimed: £532.50.\n\nPlease remit payment to my original payment method within 14 days. If you decline, please provide your full written reasons together with any evidence relied upon. Failing a satisfactory resolution, I will escalate to the UK Civil Aviation Authority / an approved ADR body and, if necessary, pursue the matter through the county court.\n\nEnclosures: cancellation email (14 March 2026); Heathrow Plaza Hotel receipt (conf. HPX-559102).\n\nYours faithfully,\nJane Doe\njane.doe@email.com\nBooking reference: QX7T2P",
+        "submit_to": {
+          "name": "Northwind Airlines Customer Care",
+          "method": "email",
+          "address": "Reply to the airline's Customer Care team (the cancellation was sent from a no-reply address: no-reply@northwind-air.com — use the official customer-relations/complaints email or web claim form listed on northwind-air.com, as no-reply is not monitored).",
+          "form_url": null
+        },
+        "ready_to_submit": true
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (cancellation_email.txt):\nFrom: Northwind Airlines <no-reply@northwind-air.com>\nTo: jane.doe@email.com\nDate: Sat, 14 Mar 2026 06:12\nSubject: Important: Your flight NW482 has been cancelled\n\nDear Ms. Jane Doe,\n\nWe're sorry to inform you that your flight has been cancelled due to an\nunexpected technical fault with the aircraft.\n\n  Booking reference:  QX7T2P\n  Flight:             NW482\n  Route:              London Heathrow (LHR) → Athens (ATH)\n  Scheduled departure: 14 March 2026, 18:40\n  Status:             CANCELLED\n\nWe have automatically rebooked you onto flight NW488 departing the following\nmorning, 15 March 2026 at 07:25, arriving Athens 13:10 — an arrival delay of\napproximately 16 hours versus your original itinerary.\n\nAs the disruption occurred overnight, you may arrange your own overnight\naccommodation and reasonable meals and retain your receipts.\n\nWe apologise for the inconvenience.\n\nNorthwind Airlines Customer Care\n\n\nDocument (hotel_receipt.txt):\nTHE HEATHROW PLAZA HOTEL\nBath Road, Hounslow, London TW6 2AQ\n\nGUEST FOLIO / RECEIPT\n------------------------------------------------\nGuest name:      Jane Doe\nRoom:            412 (1 night)\nCheck-in:        14 Mar 2026  21:50\nCheck-out:       15 Mar 2026  05:30\nConfirmation:    HPX-559102\n------------------------------------------------\nOvernight room rate .......................  £128.00\nRestaurant (dinner) .......................   £22.50\nBreakfast .................................   £14.00\nAirport transfer (taxi) ...................   £18.00\n------------------------------------------------\nTOTAL PAID (card ****4471) ................  £182.50\n\nThank you for staying with us.\n\n\nAdditional context: Flight was cancelled the night before departure; I had to pay for a hotel and meals.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      }
+    },
+    {
+      "id": 6,
+      "status": "approved",
+      "created_at": "2026-07-19T19:29:14.779824+00:00",
+      "updated_at": "2026-07-19T19:30:30.989635+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — US domestic)",
+      "summary": "Delta cancelled flight DL482 (Atlanta→Boston) on March 14, 2026 due to a mechanical issue and rebooked the passenger the next morning, forcing $222 in overnight hotel and meal costs.",
+      "amount_str": "$222.00 ($182 hotel + $40 meals)",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation under US DOT and Delta's own published commitments, which obligate Delta to cover hotel and meal costs when a controllable cancellation forces an overnight stay. The expenses are modest, reasonable, and documented, making this a routine, well-supported reimbursement request. (No fixed statutory EU261/UK261 compensation applies to a US-domestic flight.)",
+      "dispute_primary": "Direct reimbursement request to Delta via the Delta Comment/Complaint web form (or Reimbursement Request portal)",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 meals showing date, vendor, and amount.",
+        "Submit a reimbursement request through Delta's online Comment/Complaint form referencing confirmation GKX9QP and flight DL482.",
+        "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's Customer Commitment for hotel and meal coverage.",
+        "Attach receipts and request reimbursement to your original payment method or via check.",
+        "Keep a record of the case/reference number Delta issues."
+      ],
+      "dispute_escalation": "If Delta denies or does not respond within 30 days, file a complaint with the US Department of Transportation (DOT) Aviation Consumer Protection Division at https://www.transportation.gov/airconsumer/complain, and consider a small-claims court filing or credit-card chargeback for the $222 if the expenses were charged to a card.",
+      "legal_basis": [
+        "US DOT Airline Customer Service Dashboard commitments (mechanical/maintenance = 'controllable' cancellation)",
+        "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations & Delays) and Rule 260 (amenities for controllable delays/cancellations)",
+        "Delta Customer Commitment (hotel accommodation, ground transport, and meal provisions for controllable overnight disruptions)",
+        "Note: EU261/UK261 does NOT apply — this is a wholly US-domestic flight operated by a US carrier"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980 (mail alternative)",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement Request — Controllable Cancellation of Flight DL482\nConfirmation Number: GKX9QP\nPassenger: Anthony Stark\nFlight: DL482, Atlanta (ATL) to Boston (BOS)\nDate: March 14, 2026\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222.00 in out-of-pocket expenses I incurred as a direct result of Delta's cancellation of flight DL482 from Atlanta to Boston on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue. Under the US Department of Transportation's Airline Customer Service Dashboard and Delta's own Customer Commitment, a mechanical/maintenance cancellation is a 'controllable' cancellation, and Delta commits to providing hotel accommodation and meals when such a disruption forces an overnight stay.\n\nBecause the earliest available rebooking was the following morning, I was required to stay overnight and incurred the following reasonable expenses:\n  • Hotel: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nItemized receipts are attached. I respectfully request full reimbursement of $222.00 to my original form of payment or by check.\n\nPlease confirm receipt of this request and provide a case reference number. I can be reached at the contact details below.\n\nThank you for your prompt attention.\n\nSincerely,\nAnthony Stark\nEmail: jane.doe@email.com (please confirm)\nPhone: 650-555-0142\nConfirmation: GKX9QP",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — US domestic)",
+        "summary": "Delta cancelled flight DL482 (Atlanta→Boston) on March 14, 2026 due to a mechanical issue and rebooked the passenger the next morning, forcing $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222.00 ($182 hotel + $40 meals)",
+        "what_happened": "Passenger Anthony Stark (confirmation GKX9QP) was booked on Delta flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026. Delta cancelled the flight citing a mechanical issue — a cause squarely within the airline's control ('controllable' under US DOT classification). Delta rebooked the passenger onto a flight the following morning, requiring an unplanned overnight stay. As a result, the passenger incurred $182 for a hotel and $40 for meals, totaling $222, and is seeking reimbursement of these out-of-pocket expenses.",
+        "legal_basis": [
+          "US DOT Airline Customer Service Dashboard commitments (mechanical/maintenance = 'controllable' cancellation)",
+          "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations & Delays) and Rule 260 (amenities for controllable delays/cancellations)",
+          "Delta Customer Commitment (hotel accommodation, ground transport, and meal provisions for controllable overnight disruptions)",
+          "Note: EU261/UK261 does NOT apply — this is a wholly US-domestic flight operated by a US carrier"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation under US DOT and Delta's own published commitments, which obligate Delta to cover hotel and meal costs when a controllable cancellation forces an overnight stay. The expenses are modest, reasonable, and documented, making this a routine, well-supported reimbursement request. (No fixed statutory EU261/UK261 compensation applies to a US-domestic flight.)",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta via the Delta Comment/Complaint web form (or Reimbursement Request portal)",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 meals showing date, vendor, and amount.",
+            "Submit a reimbursement request through Delta's online Comment/Complaint form referencing confirmation GKX9QP and flight DL482.",
+            "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's Customer Commitment for hotel and meal coverage.",
+            "Attach receipts and request reimbursement to your original payment method or via check.",
+            "Keep a record of the case/reference number Delta issues."
+          ],
+          "escalation": "If Delta denies or does not respond within 30 days, file a complaint with the US Department of Transportation (DOT) Aviation Consumer Protection Division at https://www.transportation.gov/airconsumer/complain, and consider a small-claims court filing or credit-card chargeback for the $222 if the expenses were charged to a card."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt ($182) showing date and property name",
+          "Meal receipt(s) totaling $40",
+          "Any written cancellation notice or email from Delta confirming the mechanical cause of the DL482 cancellation"
+        ],
+        "questions": [
+          "The document lists the passenger name as 'Anthony Stark' but the contact email as 'jane.doe@email.com' — please confirm the correct passenger name and contact email so the claim matches your Delta booking.",
+          "Do you have receipts for the hotel and meals, and were they charged to a credit/debit card (relevant for a possible chargeback backup)?",
+          "Did Delta offer you a hotel/meal voucher at the airport that you declined, or were none offered?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement Request — Controllable Cancellation of Flight DL482\nConfirmation Number: GKX9QP\nPassenger: Anthony Stark\nFlight: DL482, Atlanta (ATL) to Boston (BOS)\nDate: March 14, 2026\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222.00 in out-of-pocket expenses I incurred as a direct result of Delta's cancellation of flight DL482 from Atlanta to Boston on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue. Under the US Department of Transportation's Airline Customer Service Dashboard and Delta's own Customer Commitment, a mechanical/maintenance cancellation is a 'controllable' cancellation, and Delta commits to providing hotel accommodation and meals when such a disruption forces an overnight stay.\n\nBecause the earliest available rebooking was the following morning, I was required to stay overnight and incurred the following reasonable expenses:\n  • Hotel: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nItemized receipts are attached. I respectfully request full reimbursement of $222.00 to my original form of payment or by check.\n\nPlease confirm receipt of this request and provide a case reference number. I can be reached at the contact details below.\n\nThank you for your prompt attention.\n\nSincerely,\nAnthony Stark\nEmail: jane.doe@email.com (please confirm)\nPhone: 650-555-0142\nConfirmation: GKX9QP",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980 (mail alternative)",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Anthony Stark, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 7,
+      "status": "approved",
+      "created_at": "2026-07-19T19:36:34.768152+00:00",
+      "updated_at": "2026-07-19T19:38:30.725736+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's domestic flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is a 'controllable' cancellation — squarely within Delta's control, not weather or ATC. Under Delta's own Customer Commitment and its published DOT dashboard commitments, Delta pledges to provide overnight hotel accommodations and meal vouchers when a controllable cancellation forces an overnight wait. The out-of-pocket amounts ($182 hotel, $40 meals) are modest and reasonable. Note: because this is a U.S. domestic flight on a U.S. carrier, EU261/UK261 does NOT apply and no fixed statutory compensation is owed — but the expense reimbursement itself is well-supported.",
+      "dispute_primary": "Submit a reimbursement request directly to Delta via its Comment/Complaint web form, citing the controllable cancellation and Delta's DOT dashboard commitments, with receipts attached.",
+      "dispute_steps": [
+        "Gather and scan the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026.",
+        "Save your rebooking confirmation and any Delta notice/email stating the cancellation reason (mechanical).",
+        "Submit the claim through Delta's online Comment/Complaint form (or the Reimbursement request tool) with confirmation number GKX9QP and attached receipts.",
+        "Keep a copy of the submission confirmation and any case/reference number Delta issues.",
+        "Allow Delta up to 30 days to respond (DOT requires acknowledgment within 30 days and substantive response within 60 days)."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at https://www.transportation.gov/airconsumer/file-consumer-complaint. If you paid by credit card and Delta refuses, you may also dispute the incremental costs, though a DOT complaint is the stronger route here.",
+      "legal_basis": [
+        "U.S. DOT Airline Customer Service Dashboard commitments (controllable cancellation → hotel + meals + ground transport)",
+        "Delta Air Lines Customer Commitment / Contract of Carriage (amenities for controllable delays/cancellations)",
+        "14 CFR Part 259 (airline customer service plan obligations)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight DL482 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nContact: jane.doe@email.com | 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred as a direct result of Delta cancelling flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight. Because a mechanical issue is a cancellation within the airline's control (a 'controllable cancellation'), I was forced to stay overnight and incurred the following reasonable expenses:\n\n  • Hotel accommodation: $182\n  • Meals: $40\n  • Total: $222\n\nUnder Delta's published Customer Commitment and the commitments Delta has made on the U.S. Department of Transportation's Airline Customer Service Dashboard, Delta provides overnight hotel accommodations and meals to passengers whose travel is disrupted overnight by a controllable cancellation. Accordingly, I request full reimbursement of $222.\n\nItemized receipts for the hotel and meals are attached. Please process this reimbursement to my original form of payment or by check. I can be reached at jane.doe@email.com or 650-555-0142 with any questions.\n\nI look forward to your response within 30 days.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's domestic flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222",
+        "what_happened": "Passenger Jane Doe (confirmation GKX9QP) was booked on Delta flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026. Delta cancelled the flight due to a mechanical issue — a 'controllable' cancellation within the airline's control under U.S. DOT terminology. Delta rebooked her on the next morning's flight, requiring an unplanned overnight stay. She incurred $182 for a hotel and $40 for meals, totaling $222, and is seeking reimbursement of these expenses.",
+        "legal_basis": [
+          "U.S. DOT Airline Customer Service Dashboard commitments (controllable cancellation → hotel + meals + ground transport)",
+          "Delta Air Lines Customer Commitment / Contract of Carriage (amenities for controllable delays/cancellations)",
+          "14 CFR Part 259 (airline customer service plan obligations)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is a 'controllable' cancellation — squarely within Delta's control, not weather or ATC. Under Delta's own Customer Commitment and its published DOT dashboard commitments, Delta pledges to provide overnight hotel accommodations and meal vouchers when a controllable cancellation forces an overnight wait. The out-of-pocket amounts ($182 hotel, $40 meals) are modest and reasonable. Note: because this is a U.S. domestic flight on a U.S. carrier, EU261/UK261 does NOT apply and no fixed statutory compensation is owed — but the expense reimbursement itself is well-supported.",
+        "dispute_path": {
+          "primary": "Submit a reimbursement request directly to Delta via its Comment/Complaint web form, citing the controllable cancellation and Delta's DOT dashboard commitments, with receipts attached.",
+          "steps": [
+            "Gather and scan the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026.",
+            "Save your rebooking confirmation and any Delta notice/email stating the cancellation reason (mechanical).",
+            "Submit the claim through Delta's online Comment/Complaint form (or the Reimbursement request tool) with confirmation number GKX9QP and attached receipts.",
+            "Keep a copy of the submission confirmation and any case/reference number Delta issues.",
+            "Allow Delta up to 30 days to respond (DOT requires acknowledgment within 30 days and substantive response within 60 days)."
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at https://www.transportation.gov/airconsumer/file-consumer-complaint. If you paid by credit card and Delta refuses, you may also dispute the incremental costs, though a DOT complaint is the stronger route here."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt for $182 (dated night of March 14, 2026)",
+          "Meal receipts totaling $40",
+          "Delta's written cancellation notice stating the mechanical reason (email/app screenshot)"
+        ],
+        "questions": [
+          "Do you have itemized receipts for the hotel and meals to attach?",
+          "Did Delta offer you any hotel/meal vouchers or reimbursement at the airport that you declined or did not receive?",
+          "How did you pay for the hotel and meals (credit card, cash)?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight DL482 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nContact: jane.doe@email.com | 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred as a direct result of Delta cancelling flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight. Because a mechanical issue is a cancellation within the airline's control (a 'controllable cancellation'), I was forced to stay overnight and incurred the following reasonable expenses:\n\n  • Hotel accommodation: $182\n  • Meals: $40\n  • Total: $222\n\nUnder Delta's published Customer Commitment and the commitments Delta has made on the U.S. Department of Transportation's Airline Customer Service Dashboard, Delta provides overnight hotel accommodations and meals to passengers whose travel is disrupted overnight by a controllable cancellation. Accordingly, I request full reimbursement of $222.\n\nItemized receipts for the hotel and meals are attached. Please process this reimbursement to my original form of payment or by check. I can be reached at jane.doe@email.com or 650-555-0142 with any questions.\n\nI look forward to your response within 30 days.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 8,
+      "status": "approved",
+      "created_at": "2026-07-19T19:43:15.485150+00:00",
+      "updated_at": "2026-07-19T19:44:43.897560+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's ATL→BOS flight (DL482) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $182 for a hotel and $40 for meals overnight.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is a 'controllable' cancellation (not weather or ATC), so it is squarely within Delta's own published Customer Commitment for overnight hotel and meal coverage. Note: EU261/UK261 does NOT apply here — this is a domestic U.S. flight on a U.S. carrier with no EU/UK departure, so there is no fixed statutory compensation, only expense reimbursement. The reimbursement claim itself is well-supported provided receipts are produced.",
+      "dispute_primary": "File an expense reimbursement request directly with Delta (Comment/Complaint form) citing its Customer Commitment for controllable cancellations, attaching receipts.",
+      "dispute_steps": [
+        "Gather the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026.",
+        "Submit Delta's online 'Comment/Complaint' form at delta.com (Help Center → Comment/Complaint) with confirmation GKX9QP, flight DL482, and the reimbursement request.",
+        "Attach all receipts and state the cancellation reason (mechanical) and that Delta rebooked you the next morning.",
+        "Request reimbursement of $222 to your original payment method or as a check.",
+        "Keep a copy of the submission confirmation number and follow up in writing if no response within 30 days."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation (Aviation Consumer Protection Division) at transportation.gov/airconsumer, and consider disputing via your credit card issuer or small claims court for the $222.",
+      "legal_basis": [
+        "Delta Contract of Carriage, Rule 240 (Schedule Irregularities) — amenities/reimbursement for delays and cancellations within Delta's control",
+        "Delta Customer Commitment — provides overnight hotel accommodations and meal vouchers for controllable cancellations/delays requiring an overnight stay",
+        "U.S. DOT Airline Customer Service Dashboard commitments — for controllable cancellations, airlines commit to rebook, and provide meals and hotel accommodations for overnight delays",
+        "U.S. DOT 14 CFR Part 259 (unfair/deceptive practices; adherence to customer service commitments)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/overview",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Expense reimbursement for controllable cancellation of Flight DL482 — Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta's cancellation of Flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue — a cause within the airline's control — and rebooked me on the following morning's flight. Because of this overnight delay, I was required to pay for a hotel ($182) and meals ($40), for a total of $222.\n\nUnder Delta's Customer Commitment and Contract of Carriage (Rule 240), Delta provides overnight hotel accommodations and meals for controllable cancellations that require passengers to stay overnight. I am therefore requesting full reimbursement of these reasonable and necessary expenses.\n\nMy details:\n- Name: Jane Doe\n- Confirmation code: GKX9QP\n- Flight: DL482, ATL → BOS, March 14, 2026\n- Email: jane.doe@email.com\n- Phone: 650-555-0142\n\nI have attached the hotel and meal receipts as documentation. Please reimburse the $222 to my original form of payment or by check.\n\nI appreciate your prompt attention and look forward to your response within 30 days.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's ATL→BOS flight (DL482) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $182 for a hotel and $40 for meals overnight.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta Air Lines cancelled flight DL482 from Atlanta (ATL) to Boston (BOS), a domestic U.S. flight, citing a mechanical issue. Because a mechanical fault is within the airline's control ('controllable cancellation'), Delta rebooked Jane Doe onto the next morning's flight, requiring her to stay overnight. She incurred $182 in hotel costs and $40 in meal costs, totaling $222, for which she is seeking reimbursement.",
+        "legal_basis": [
+          "Delta Contract of Carriage, Rule 240 (Schedule Irregularities) — amenities/reimbursement for delays and cancellations within Delta's control",
+          "Delta Customer Commitment — provides overnight hotel accommodations and meal vouchers for controllable cancellations/delays requiring an overnight stay",
+          "U.S. DOT Airline Customer Service Dashboard commitments — for controllable cancellations, airlines commit to rebook, and provide meals and hotel accommodations for overnight delays",
+          "U.S. DOT 14 CFR Part 259 (unfair/deceptive practices; adherence to customer service commitments)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is a 'controllable' cancellation (not weather or ATC), so it is squarely within Delta's own published Customer Commitment for overnight hotel and meal coverage. Note: EU261/UK261 does NOT apply here — this is a domestic U.S. flight on a U.S. carrier with no EU/UK departure, so there is no fixed statutory compensation, only expense reimbursement. The reimbursement claim itself is well-supported provided receipts are produced.",
+        "dispute_path": {
+          "primary": "File an expense reimbursement request directly with Delta (Comment/Complaint form) citing its Customer Commitment for controllable cancellations, attaching receipts.",
+          "steps": [
+            "Gather the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026.",
+            "Submit Delta's online 'Comment/Complaint' form at delta.com (Help Center → Comment/Complaint) with confirmation GKX9QP, flight DL482, and the reimbursement request.",
+            "Attach all receipts and state the cancellation reason (mechanical) and that Delta rebooked you the next morning.",
+            "Request reimbursement of $222 to your original payment method or as a check.",
+            "Keep a copy of the submission confirmation number and follow up in writing if no response within 30 days."
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation (Aviation Consumer Protection Division) at transportation.gov/airconsumer, and consider disputing via your credit card issuer or small claims court for the $222."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt for $182 (dated night of March 14, 2026)",
+          "Meal receipts totaling $40",
+          "Delta's cancellation notice/email confirming the mechanical reason and rebooking",
+          "Original ticket receipt / booking confirmation for GKX9QP"
+        ],
+        "questions": [
+          "Do you have receipts for the hotel and meals? Delta will require them.",
+          "Did Delta offer any hotel/meal vouchers or amenities at the airport that you declined or did not receive?",
+          "Was the hotel booked because Delta could not accommodate you, and roughly how far from the airport was it (to confirm reasonableness)?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Expense reimbursement for controllable cancellation of Flight DL482 — Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta's cancellation of Flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue — a cause within the airline's control — and rebooked me on the following morning's flight. Because of this overnight delay, I was required to pay for a hotel ($182) and meals ($40), for a total of $222.\n\nUnder Delta's Customer Commitment and Contract of Carriage (Rule 240), Delta provides overnight hotel accommodations and meals for controllable cancellations that require passengers to stay overnight. I am therefore requesting full reimbursement of these reasonable and necessary expenses.\n\nMy details:\n- Name: Jane Doe\n- Confirmation code: GKX9QP\n- Flight: DL482, ATL → BOS, March 14, 2026\n- Email: jane.doe@email.com\n- Phone: 650-555-0142\n\nI have attached the hotel and meal receipts as documentation. Please reimburse the $222 to my original form of payment or by check.\n\nI appreciate your prompt attention and look forward to your response within 30 days.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/overview"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 9,
+      "status": "approved",
+      "created_at": "2026-07-19T19:46:05.694935+00:00",
+      "updated_at": "2026-07-19T19:47:41.158469+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $182 for a hotel and $40 for meals overnight.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is a 'controllable' cancellation under U.S. DOT policy and Delta's own Customer Commitment, which obligate Delta to cover overnight hotel and meal expenses. The facts are clear, the amounts are modest and typical, and Delta publicly commits to these reimbursements. Note: this is a domestic U.S. flight, so EU261/UK261 fixed compensation does not apply — only expense reimbursement.",
+      "dispute_primary": "Submit an expense reimbursement request directly to Delta with receipts, citing its Customer Commitment for controllable cancellations",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 meals",
+        "Save the cancellation notice/rebooking confirmation showing DL482 was cancelled for a mechanical issue on March 14, 2026",
+        "File the reimbursement request via Delta's online 'Comment/Complaint' form at delta.com, referencing confirmation GKX9QP",
+        "Explicitly state the cancellation was for a mechanical (controllable) reason and cite Delta's commitment to cover meals and overnight hotel",
+        "Request $222 total reimbursement to your original payment method",
+        "Keep a copy of the submission and any case/reference number"
+      ],
+      "dispute_escalation": "If Delta denies or does not respond within ~2-4 weeks, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at secure.dot.gov/air-travel-complaint (or by mail), citing Delta's published Customer Commitment. You may also dispute the hotel/meal charges' relevance is limited — but a credit card chargeback is not applicable here since you paid a hotel/restaurant, not Delta; the DOT complaint is the correct escalation.",
+      "legal_basis": [
+        "Delta Air Lines Customer Commitment / Contract of Carriage — meals and overnight hotel accommodations for cancellations/delays within the airline's control (mechanical issues are 'controllable')",
+        "U.S. DOT Airline Customer Service Dashboard commitments (flightrights.gov) — carriers commit to rebook, and provide meals + hotel + ground transport for controllable cancellations and delays",
+        "49 U.S.C. § 41712 — DOT authority over unfair/deceptive practices (basis for DOT complaint if airline fails to honor its commitment)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980 (online form preferred)",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/overview",
+      "draft_letter": "Subject: Reimbursement Request — Cancelled Flight DL482 (ATL–BOS), Confirmation GKX9QP\n\nTo Delta Air Lines Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta cancelling my flight.\n\nOn March 14, 2026, Delta cancelled flight DL482 from Atlanta (ATL) to Boston (BOS) due to a mechanical issue. Delta rebooked me on a flight the following morning, which required me to stay overnight. As a result, I paid $182 for a hotel and $40 for meals — a total of $222.\n\nA mechanical issue is a cancellation within the airline's control. Under Delta's Customer Commitment and the U.S. Department of Transportation's Airline Customer Service commitments, Delta is responsible for providing (or reimbursing) overnight hotel accommodations, meals, and ground transportation when a controllable cancellation requires an overnight stay.\n\nI have attached itemized receipts for the hotel and meals. Please reimburse the full $222 to my original form of payment.\n\nMy contact details:\nEmail: jane.doe@email.com\nPhone: 650-555-0142\n\nI look forward to your prompt response and a reference number for this request. If I do not receive a satisfactory resolution, I will escalate this matter to the U.S. Department of Transportation Aviation Consumer Protection Division.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $182 for a hotel and $40 for meals overnight.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta Air Lines cancelled flight DL482 from Atlanta (ATL) to Boston (BOS) because of a mechanical issue — a cause within the airline's control. Delta did not fly the passenger out until the next morning, requiring an overnight stay. Jane Doe (confirmation GKX9QP) incurred $182 in hotel costs and $40 in meal costs as a direct result of the delay. This is a purely domestic U.S. flight (ATL→BOS), so EU261/UK261 fixed statutory compensation does NOT apply. The claim is instead for out-of-pocket expenses (duty of care) arising from a 'controllable' cancellation, which Delta's own Customer Commitment and current U.S. DOT policy require the airline to cover.",
+        "legal_basis": [
+          "Delta Air Lines Customer Commitment / Contract of Carriage — meals and overnight hotel accommodations for cancellations/delays within the airline's control (mechanical issues are 'controllable')",
+          "U.S. DOT Airline Customer Service Dashboard commitments (flightrights.gov) — carriers commit to rebook, and provide meals + hotel + ground transport for controllable cancellations and delays",
+          "49 U.S.C. § 41712 — DOT authority over unfair/deceptive practices (basis for DOT complaint if airline fails to honor its commitment)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is a 'controllable' cancellation under U.S. DOT policy and Delta's own Customer Commitment, which obligate Delta to cover overnight hotel and meal expenses. The facts are clear, the amounts are modest and typical, and Delta publicly commits to these reimbursements. Note: this is a domestic U.S. flight, so EU261/UK261 fixed compensation does not apply — only expense reimbursement.",
+        "dispute_path": {
+          "primary": "Submit an expense reimbursement request directly to Delta with receipts, citing its Customer Commitment for controllable cancellations",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 meals",
+            "Save the cancellation notice/rebooking confirmation showing DL482 was cancelled for a mechanical issue on March 14, 2026",
+            "File the reimbursement request via Delta's online 'Comment/Complaint' form at delta.com, referencing confirmation GKX9QP",
+            "Explicitly state the cancellation was for a mechanical (controllable) reason and cite Delta's commitment to cover meals and overnight hotel",
+            "Request $222 total reimbursement to your original payment method",
+            "Keep a copy of the submission and any case/reference number"
+          ],
+          "escalation": "If Delta denies or does not respond within ~2-4 weeks, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at secure.dot.gov/air-travel-complaint (or by mail), citing Delta's published Customer Commitment. You may also dispute the hotel/meal charges' relevance is limited — but a credit card chargeback is not applicable here since you paid a hotel/restaurant, not Delta; the DOT complaint is the correct escalation."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt showing $182 charge and date",
+          "Meal receipts totaling $40",
+          "Delta cancellation/rebooking notice or email confirming DL482 was cancelled for a mechanical issue"
+        ],
+        "questions": [
+          "Did Delta provide any hotel/meal voucher or reimbursement offer at the airport that you declined or used?",
+          "Do you have itemized receipts for the hotel and meals?",
+          "Was any part of the overnight expense already refunded or credited?"
+        ],
+        "draft_letter": "Subject: Reimbursement Request — Cancelled Flight DL482 (ATL–BOS), Confirmation GKX9QP\n\nTo Delta Air Lines Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta cancelling my flight.\n\nOn March 14, 2026, Delta cancelled flight DL482 from Atlanta (ATL) to Boston (BOS) due to a mechanical issue. Delta rebooked me on a flight the following morning, which required me to stay overnight. As a result, I paid $182 for a hotel and $40 for meals — a total of $222.\n\nA mechanical issue is a cancellation within the airline's control. Under Delta's Customer Commitment and the U.S. Department of Transportation's Airline Customer Service commitments, Delta is responsible for providing (or reimbursing) overnight hotel accommodations, meals, and ground transportation when a controllable cancellation requires an overnight stay.\n\nI have attached itemized receipts for the hotel and meals. Please reimburse the full $222 to my original form of payment.\n\nMy contact details:\nEmail: jane.doe@email.com\nPhone: 650-555-0142\n\nI look forward to your prompt response and a reference number for this request. If I do not receive a satisfactory resolution, I will escalate this matter to the U.S. Department of Transportation Aviation Consumer Protection Division.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980 (online form preferred)",
+          "form_url": "https://www.delta.com/us/en/need-help/overview"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 10,
+      "status": "approved",
+      "created_at": "2026-07-19T19:48:48.624067+00:00",
+      "updated_at": "2026-07-19T19:50:20.213936+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to incur $182 in hotel and $40 in meal costs overnight.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is classified as a 'controllable' cancellation under U.S. DOT rules, and Delta has publicly committed on the DOT dashboard to cover hotel and meal costs when a controllable cancellation forces an overnight stay. The claim is a modest, well-documented amount ($222) squarely within Delta's stated policy. The only gap is producing the itemized receipts.",
+      "dispute_primary": "Direct reimbursement request to Delta Customer Care with receipts attached",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 meals showing date (March 14, 2026), vendor, and amount paid.",
+        "Submit a reimbursement request through Delta's 'Comment/Complaint' web form at delta.com, referencing confirmation GKX9QP and flight DL482.",
+        "Attach receipts and the claim letter below; keep copies of everything.",
+        "Note in the request that the cancellation was a controllable (mechanical) event and that Delta's DOT dashboard commitment covers overnight hotel and meals.",
+        "Allow Delta up to 30 days to respond; follow up in writing if no reply."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at secure.dot.gov/air-travel-complaint, citing Delta's controllable-cancellation commitment. As a secondary route, if the expenses were charged to a credit card, consider a chargeback or check for travel/trip-delay coverage on the card.",
+      "legal_basis": [
+        "Delta Contract of Carriage, Rule 240 (Cancellations, Delays and Diversions) — care and amenities for controllable disruptions",
+        "U.S. DOT Airline Customer Service Dashboard commitments — Delta commits to provide/reimburse hotel accommodations and meals for controllable cancellations causing overnight delays",
+        "14 CFR Part 259 (DOT customer service plan enforcement)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement of Overnight Expenses — Cancelled Flight DL482, Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in out-of-pocket expenses I incurred because Delta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nThe flight was cancelled due to a mechanical (maintenance) issue, and Delta rebooked me on a flight the following morning. This unplanned overnight stay forced me to pay $182 for a hotel and $40 for meals — a total of $222. Itemized receipts are attached.\n\nA mechanical cancellation is a controllable event under U.S. Department of Transportation rules, and Delta has committed on the DOT Airline Customer Service Dashboard to cover hotel accommodations and meals when a controllable cancellation causes an overnight delay. I am therefore requesting full reimbursement of $222.\n\nPlease process this reimbursement to my original payment method or issue a check. You can reach me at jane.doe@email.com or 650-555-0142. I appreciate your prompt attention and look forward to your response within 30 days.\n\nSincerely,\nJane Doe\nConfirmation: GKX9QP\njane.doe@email.com | 650-555-0142",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to incur $182 in hotel and $40 in meal costs overnight.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta flight DL482 from Atlanta (ATL) to Boston (BOS), booked under confirmation GKX9QP for passenger Jane Doe, was cancelled because of a mechanical (aircraft maintenance) issue. Delta rebooked the passenger onto a flight the following morning, requiring an unplanned overnight stay. As a result, Jane Doe paid $182 for a hotel and $40 for meals — $222 total in out-of-pocket expenses she is now seeking to recover. This is a US domestic flight on a US carrier, so EU261/UK261 fixed compensation does NOT apply; recovery is based on Delta's own Contract of Carriage and US DOT controllable-cancellation commitments, which cover reimbursement of overnight expenses caused by a controllable (mechanical) disruption.",
+        "legal_basis": [
+          "Delta Contract of Carriage, Rule 240 (Cancellations, Delays and Diversions) — care and amenities for controllable disruptions",
+          "U.S. DOT Airline Customer Service Dashboard commitments — Delta commits to provide/reimburse hotel accommodations and meals for controllable cancellations causing overnight delays",
+          "14 CFR Part 259 (DOT customer service plan enforcement)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is classified as a 'controllable' cancellation under U.S. DOT rules, and Delta has publicly committed on the DOT dashboard to cover hotel and meal costs when a controllable cancellation forces an overnight stay. The claim is a modest, well-documented amount ($222) squarely within Delta's stated policy. The only gap is producing the itemized receipts.",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta Customer Care with receipts attached",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 meals showing date (March 14, 2026), vendor, and amount paid.",
+            "Submit a reimbursement request through Delta's 'Comment/Complaint' web form at delta.com, referencing confirmation GKX9QP and flight DL482.",
+            "Attach receipts and the claim letter below; keep copies of everything.",
+            "Note in the request that the cancellation was a controllable (mechanical) event and that Delta's DOT dashboard commitment covers overnight hotel and meals.",
+            "Allow Delta up to 30 days to respond; follow up in writing if no reply."
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Aviation Consumer Protection Division at secure.dot.gov/air-travel-complaint, citing Delta's controllable-cancellation commitment. As a secondary route, if the expenses were charged to a credit card, consider a chargeback or check for travel/trip-delay coverage on the card."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt for $182 (dated March 14, 2026)",
+          "Itemized meal receipt(s) totaling $40",
+          "Delta cancellation notice / rebooking confirmation (email or app screenshot), if available"
+        ],
+        "questions": [
+          "Do you have the hotel and meal receipts to attach?",
+          "Did Delta give any written reason for the cancellation (e.g., email stating 'maintenance')?",
+          "Did you charge these expenses to a credit card that might offer trip-delay coverage?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement of Overnight Expenses — Cancelled Flight DL482, Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in out-of-pocket expenses I incurred because Delta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nThe flight was cancelled due to a mechanical (maintenance) issue, and Delta rebooked me on a flight the following morning. This unplanned overnight stay forced me to pay $182 for a hotel and $40 for meals — a total of $222. Itemized receipts are attached.\n\nA mechanical cancellation is a controllable event under U.S. Department of Transportation rules, and Delta has committed on the DOT Airline Customer Service Dashboard to cover hotel accommodations and meals when a controllable cancellation causes an overnight delay. I am therefore requesting full reimbursement of $222.\n\nPlease process this reimbursement to my original payment method or issue a check. You can reach me at jane.doe@email.com or 650-555-0142. I appreciate your prompt attention and look forward to your response within 30 days.\n\nSincerely,\nJane Doe\nConfirmation: GKX9QP\njane.doe@email.com | 650-555-0142",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 11,
+      "status": "approved",
+      "created_at": "2026-07-19T19:54:50.356465+00:00",
+      "updated_at": "2026-07-19T19:57:26.181188+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement — controllable cancellation (US domestic)",
+      "summary": "Delta cancelled Jane Doe's Atlanta–Boston flight DL482 on March 14, 2026 for a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal expenses.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is squarely within Delta's control (not weather or ATC), so under DOT's controllable-cancellation framework and Delta's own Contract of Carriage/Customer Commitment, Delta owes overnight hotel and meal amenities. The requested amounts ($182 hotel, $40 meals) are modest and reasonable. NOTE: EU261/UK261 does NOT apply — this is a wholly domestic US flight on a US carrier, so there is NO fixed statutory cash compensation, only expense reimbursement.",
+      "dispute_primary": "Submit a reimbursement request directly to Delta via its online Comment/Complaint form with itemized receipts",
+      "dispute_steps": [
+        "Gather receipts: itemized hotel folio ($182) and meal receipts ($40)",
+        "Confirm the cancellation reason is documented as 'mechanical' (screenshot Delta's cancellation notice/email)",
+        "Submit the claim through Delta's online Comment/Complaint form referencing confirmation GKX9QP and flight DL482",
+        "Request $222 reimbursement by original payment method (not travel voucher)",
+        "Keep a copy of the submission confirmation number and follow up in 15 business days if no response"
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (aviationconsumer@dot.gov / web form). If paid by credit card, you may also dispute the hotel charge only where applicable, or pursue small claims court for the $222.",
+      "legal_basis": [
+        "U.S. DOT policy — mechanical cancellations are 'controllable' cancellations, obligating the carrier to provide amenities (meals and overnight hotel/ground transport) per its published Customer Service commitments",
+        "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations and Delays / amenities for controllable irregular operations)",
+        "Delta Customer Commitment / Customer Service Plan (meal and hotel accommodations during controllable overnight delays)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care / Comment-Complaint",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL482, ATL→BOS, March 14, 2026\nPassenger: Jane Doe | Confirmation: GKX9QP\nContact: jane.doe@email.com | 650-555-0142\n\nDear Delta Customer Care,\n\nOn March 14, 2026, my flight DL482 from Atlanta (ATL) to Boston (BOS) was cancelled due to a mechanical issue, and I was rebooked on a flight the following morning. Because this cancellation was caused by a mechanical problem, it is a controllable cancellation within Delta's control under U.S. DOT policy and Delta's Contract of Carriage and Customer Commitment, which obligate Delta to provide overnight hotel accommodations and meals in these circumstances.\n\nAs a result of the overnight delay, I incurred the following out-of-pocket expenses:\n  • Hotel accommodation: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nI respectfully request full reimbursement of $222.00 to my original form of payment. Itemized receipts are attached.\n\nPlease confirm receipt of this request and the expected timeline for reimbursement. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement — controllable cancellation (US domestic)",
+        "summary": "Delta cancelled Jane Doe's Atlanta–Boston flight DL482 on March 14, 2026 for a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal expenses.",
+        "amount_at_stake": "$222",
+        "what_happened": "Flight DL482 (ATL→BOS) on 2026-03-14 was cancelled by Delta due to a mechanical issue — a cause within the airline's control ('controllable cancellation'). The passenger was rebooked to the next morning and incurred $182 for a hotel and $40 for meals during the forced overnight stay. She is seeking reimbursement of these $222 in expenses.",
+        "legal_basis": [
+          "U.S. DOT policy — mechanical cancellations are 'controllable' cancellations, obligating the carrier to provide amenities (meals and overnight hotel/ground transport) per its published Customer Service commitments",
+          "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations and Delays / amenities for controllable irregular operations)",
+          "Delta Customer Commitment / Customer Service Plan (meal and hotel accommodations during controllable overnight delays)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is squarely within Delta's control (not weather or ATC), so under DOT's controllable-cancellation framework and Delta's own Contract of Carriage/Customer Commitment, Delta owes overnight hotel and meal amenities. The requested amounts ($182 hotel, $40 meals) are modest and reasonable. NOTE: EU261/UK261 does NOT apply — this is a wholly domestic US flight on a US carrier, so there is NO fixed statutory cash compensation, only expense reimbursement.",
+        "dispute_path": {
+          "primary": "Submit a reimbursement request directly to Delta via its online Comment/Complaint form with itemized receipts",
+          "steps": [
+            "Gather receipts: itemized hotel folio ($182) and meal receipts ($40)",
+            "Confirm the cancellation reason is documented as 'mechanical' (screenshot Delta's cancellation notice/email)",
+            "Submit the claim through Delta's online Comment/Complaint form referencing confirmation GKX9QP and flight DL482",
+            "Request $222 reimbursement by original payment method (not travel voucher)",
+            "Keep a copy of the submission confirmation number and follow up in 15 business days if no response"
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (aviationconsumer@dot.gov / web form). If paid by credit card, you may also dispute the hotel charge only where applicable, or pursue small claims court for the $222."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt/folio showing the $182 charge",
+          "Meal receipts totaling $40",
+          "Delta's written cancellation notice stating the mechanical cause"
+        ],
+        "questions": [
+          "Do you have the hotel and meal receipts to attach?",
+          "Did Delta offer any hotel/meal vouchers or amenities at the airport that you declined or used?",
+          "Do you prefer reimbursement to your original payment card rather than a travel credit/voucher?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL482, ATL→BOS, March 14, 2026\nPassenger: Jane Doe | Confirmation: GKX9QP\nContact: jane.doe@email.com | 650-555-0142\n\nDear Delta Customer Care,\n\nOn March 14, 2026, my flight DL482 from Atlanta (ATL) to Boston (BOS) was cancelled due to a mechanical issue, and I was rebooked on a flight the following morning. Because this cancellation was caused by a mechanical problem, it is a controllable cancellation within Delta's control under U.S. DOT policy and Delta's Contract of Carriage and Customer Commitment, which obligate Delta to provide overnight hotel accommodations and meals in these circumstances.\n\nAs a result of the overnight delay, I incurred the following out-of-pocket expenses:\n  • Hotel accommodation: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nI respectfully request full reimbursement of $222.00 to my original form of payment. Itemized receipts are attached.\n\nPlease confirm receipt of this request and the expected timeline for reimbursement. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care / Comment-Complaint",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 12,
+      "status": "approved",
+      "created_at": "2026-07-19T20:04:50.514048+00:00",
+      "updated_at": "2026-07-19T20:07:01.824870+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is unambiguously a controllable cancellation, which triggers Delta's published commitment to cover hotel and meals during overnight disruptions. The requested amounts ($182 hotel, $40 meals) are modest and reasonable, and Delta has publicly committed to these amenities on the DOT dashboard, making refusal difficult to justify.",
+      "dispute_primary": "Direct reimbursement request to Delta Customer Care citing its controllable-cancellation commitment",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 meals with dates matching March 14–15, 2026",
+        "Submit a reimbursement request via Delta's Comment/Complaint web form (or Delta Customer Care) referencing confirmation GKX9QP and flight DL482",
+        "State clearly that the cancellation was mechanical (controllable) and cite Delta's DOT dashboard commitment to cover hotel and meals",
+        "Request reimbursement of $222 to your original payment method and keep a copy of the submission confirmation"
+      ],
+      "dispute_escalation": "If Delta denies or fails to respond within 30 days, file a complaint with the U.S. Department of Transportation (DOT) Office of Aviation Consumer Protection at aviationconsumer.dot.gov, referencing Delta's published controllable-cancellation commitments; if paid by credit card, a chargeback for services not provided is a further option.",
+      "legal_basis": [
+        "U.S. DOT Airline Customer Service Dashboard commitments — for 'controllable' cancellations, Delta commits to provide/reimburse overnight hotel accommodations and complimentary meals or meal vouchers",
+        "Delta Contract of Carriage, Rule 240 (Schedule Irregularities) — amenities for delays/cancellations within Delta's control",
+        "DOT rule 14 CFR Part 259 (customer service commitments enforceable by DOT)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL482, ATL–BOS, March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred when Delta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nThe cancellation was caused by a mechanical issue — a circumstance within Delta's control (a 'controllable' cancellation). Delta was unable to rebook me until the following morning, which required an unplanned overnight stay. As a result, I paid $182 for a hotel and $40 for meals, a total of $222.\n\nUnder Delta's customer service commitments published on the U.S. Department of Transportation's Airline Customer Service Dashboard, Delta commits to providing overnight hotel accommodations and complimentary meals (or meal vouchers) to passengers affected by controllable cancellations. Accordingly, I request reimbursement of $222 to my original form of payment.\n\nItemized receipts for the hotel and meals are attached. Please confirm receipt of this request and let me know if any additional information is needed. I would appreciate a response within 30 days.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\njane.doe@email.com\n650-555-0142",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta cancelled flight DL482 from Atlanta (ATL) to Boston (BOS) because of a mechanical issue. A mechanical/maintenance problem is a 'controllable' cancellation within the airline's control (not weather or ATC). Delta rebooked Jane Doe on the next morning's flight, requiring an unplanned overnight stay. She incurred $182 for a hotel and $40 for meals, totaling $222, and is seeking reimbursement of these expenses.",
+        "legal_basis": [
+          "U.S. DOT Airline Customer Service Dashboard commitments — for 'controllable' cancellations, Delta commits to provide/reimburse overnight hotel accommodations and complimentary meals or meal vouchers",
+          "Delta Contract of Carriage, Rule 240 (Schedule Irregularities) — amenities for delays/cancellations within Delta's control",
+          "DOT rule 14 CFR Part 259 (customer service commitments enforceable by DOT)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is unambiguously a controllable cancellation, which triggers Delta's published commitment to cover hotel and meals during overnight disruptions. The requested amounts ($182 hotel, $40 meals) are modest and reasonable, and Delta has publicly committed to these amenities on the DOT dashboard, making refusal difficult to justify.",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta Customer Care citing its controllable-cancellation commitment",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 meals with dates matching March 14–15, 2026",
+            "Submit a reimbursement request via Delta's Comment/Complaint web form (or Delta Customer Care) referencing confirmation GKX9QP and flight DL482",
+            "State clearly that the cancellation was mechanical (controllable) and cite Delta's DOT dashboard commitment to cover hotel and meals",
+            "Request reimbursement of $222 to your original payment method and keep a copy of the submission confirmation"
+          ],
+          "escalation": "If Delta denies or fails to respond within 30 days, file a complaint with the U.S. Department of Transportation (DOT) Office of Aviation Consumer Protection at aviationconsumer.dot.gov, referencing Delta's published controllable-cancellation commitments; if paid by credit card, a chargeback for services not provided is a further option."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt for $182 (dated March 14, 2026)",
+          "Meal receipts totaling $40",
+          "Delta's cancellation notice/email stating the mechanical reason (helpful to confirm 'controllable' classification)"
+        ],
+        "questions": [
+          "Do you have itemized receipts for the hotel and meals? DOT/Delta reimbursement requires proof of expense.",
+          "Did Delta offer you a hotel/meal voucher at the airport that you declined, or were none offered?",
+          "Did you already contact Delta about this, and if so, what did they say?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL482, ATL–BOS, March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred when Delta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nThe cancellation was caused by a mechanical issue — a circumstance within Delta's control (a 'controllable' cancellation). Delta was unable to rebook me until the following morning, which required an unplanned overnight stay. As a result, I paid $182 for a hotel and $40 for meals, a total of $222.\n\nUnder Delta's customer service commitments published on the U.S. Department of Transportation's Airline Customer Service Dashboard, Delta commits to providing overnight hotel accommodations and complimentary meals (or meal vouchers) to passengers affected by controllable cancellations. Accordingly, I request reimbursement of $222 to my original form of payment.\n\nItemized receipts for the hotel and meals are attached. Please confirm receipt of this request and let me know if any additional information is needed. I would appreciate a response within 30 days.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\njane.doe@email.com\n650-555-0142",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 13,
+      "status": "approved",
+      "created_at": "2026-07-19T20:09:02.501915+00:00",
+      "updated_at": "2026-07-19T20:10:59.532188+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing an overnight stay that cost $182 for a hotel and $40 for meals.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is squarely within the airline's control (not weather or ATC), which under DOT policy and Delta's published Customer Commitment obligates Delta to cover hotel and meals during an overnight controllable cancellation. The expenses are modest, reasonable, and directly caused by the cancellation. Note: this is a U.S. domestic flight on a U.S. carrier, so EU261/UK261 statutory compensation does NOT apply — only expense reimbursement/duty of care is owed.",
+      "dispute_primary": "Submit a reimbursement request directly to Delta Customer Care with receipts",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 in meals",
+        "Submit a Comment/Complaint via Delta's online 'Comment/Complaint' form referencing confirmation GKX9QP and flight DL482",
+        "State clearly that the cancellation was due to a mechanical issue (a controllable cancellation) and request full reimbursement of $222",
+        "Attach receipts and keep a copy of the confirmation of submission",
+        "Allow Delta up to 30 days to respond per its customer service plan"
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection at https://www.transportation.gov/airconsumer/file-consumer-complaint. You may also dispute via credit card chargeback if the flight/hotel was charged and the airline failed to honor its care obligations.",
+      "legal_basis": [
+        "U.S. DOT rules & Airline Customer Service Dashboard commitments — mechanical/maintenance issues are 'controllable cancellations,' obligating the carrier to provide meals and overnight hotel accommodations",
+        "Delta Air Lines Customer Commitment / Contract of Carriage (Rule 240 — delays, cancellations and rebooking; care during controllable delays)",
+        "14 CFR Part 259 (airline customer service plans)"
+      ],
+      "submit_name": "Delta Air Lines Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Inc., Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/overview",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Cancelled flight DL482 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of expenses I incurred as a direct result of the cancellation of flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026. Delta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight, which required me to stay overnight unexpectedly.\n\nBecause this cancellation was caused by a mechanical/maintenance issue, it is a 'controllable cancellation' under U.S. Department of Transportation guidance and Delta's own published Customer Commitment, which provides for overnight hotel accommodations and meals in these circumstances. As Delta did not provide these at the time, I paid out of pocket:\n\n- Hotel (one night): $182.00\n- Meals: $40.00\n- Total: $222.00\n\nItemized receipts are attached. I respectfully request full reimbursement of $222.00 to my original form of payment or by check.\n\nPlease confirm receipt of this request and advise of the reimbursement timeline. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's flight DL482 (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing an overnight stay that cost $182 for a hotel and $40 for meals.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta Air Lines cancelled flight DL482 from Atlanta (ATL) to Boston (BOS), citing a mechanical issue. Because the cancellation was caused by a mechanical problem, it is classified as a 'controllable cancellation' under U.S. Department of Transportation guidance and Delta's own Customer Commitment. Delta rebooked Jane Doe on the next morning's flight, requiring an unplanned overnight stay. She incurred $182 in hotel costs and $40 in meal costs ($222 total) directly as a result of the cancellation and now seeks reimbursement of these out-of-pocket expenses.",
+        "legal_basis": [
+          "U.S. DOT rules & Airline Customer Service Dashboard commitments — mechanical/maintenance issues are 'controllable cancellations,' obligating the carrier to provide meals and overnight hotel accommodations",
+          "Delta Air Lines Customer Commitment / Contract of Carriage (Rule 240 — delays, cancellations and rebooking; care during controllable delays)",
+          "14 CFR Part 259 (airline customer service plans)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is squarely within the airline's control (not weather or ATC), which under DOT policy and Delta's published Customer Commitment obligates Delta to cover hotel and meals during an overnight controllable cancellation. The expenses are modest, reasonable, and directly caused by the cancellation. Note: this is a U.S. domestic flight on a U.S. carrier, so EU261/UK261 statutory compensation does NOT apply — only expense reimbursement/duty of care is owed.",
+        "dispute_path": {
+          "primary": "Submit a reimbursement request directly to Delta Customer Care with receipts",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 in meals",
+            "Submit a Comment/Complaint via Delta's online 'Comment/Complaint' form referencing confirmation GKX9QP and flight DL482",
+            "State clearly that the cancellation was due to a mechanical issue (a controllable cancellation) and request full reimbursement of $222",
+            "Attach receipts and keep a copy of the confirmation of submission",
+            "Allow Delta up to 30 days to respond per its customer service plan"
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection at https://www.transportation.gov/airconsumer/file-consumer-complaint. You may also dispute via credit card chargeback if the flight/hotel was charged and the airline failed to honor its care obligations."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt ($182)",
+          "Meal receipts ($40)",
+          "Written cancellation notice / email from Delta stating the mechanical-issue reason (strengthens the 'controllable' classification)"
+        ],
+        "questions": [
+          "Do you have the hotel and meal receipts to attach?",
+          "Did Delta offer any hotel/meal vouchers or compensation at the airport that you declined or did not receive?",
+          "Was the cancellation reason (mechanical) stated in writing (email/app notification)?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Cancelled flight DL482 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of expenses I incurred as a direct result of the cancellation of flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026. Delta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight, which required me to stay overnight unexpectedly.\n\nBecause this cancellation was caused by a mechanical/maintenance issue, it is a 'controllable cancellation' under U.S. Department of Transportation guidance and Delta's own published Customer Commitment, which provides for overnight hotel accommodations and meals in these circumstances. As Delta did not provide these at the time, I paid out of pocket:\n\n- Hotel (one night): $182.00\n- Meals: $40.00\n- Total: $222.00\n\nItemized receipts are attached. I respectfully request full reimbursement of $222.00 to my original form of payment or by check.\n\nPlease confirm receipt of this request and advise of the reimbursement timeline. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines, Inc., Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/overview"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight DL482 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 14,
+      "status": "approved",
+      "created_at": "2026-07-19T20:11:24.770736+00:00",
+      "updated_at": "2026-07-19T20:13:42.304250+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's domestic flight (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $222 out of pocket for an overnight hotel and meals.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is classified as a 'controllable cancellation' under the U.S. DOT dashboard, and Delta has publicly committed to providing (or reimbursing) overnight hotel accommodations and meals for controllable cancellations. Because Delta caused the cancellation and the expenses are modest, documented, and directly caused by the overnight delay, the claim is well-supported — provided receipts are produced.",
+      "dispute_primary": "Submit a reimbursement request directly to Delta via its Comment/Complaint web form, citing its controllable-cancellation commitment",
+      "dispute_steps": [
+        "Gather the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026",
+        "Log in to your Delta SkyMiles/My Trips account and open confirmation GKX9QP to capture the cancellation notice and rebooking details",
+        "Submit the reimbursement request through Delta's online Comment/Complaint form (delta.com/us/en/need-help/comment-complaint) with receipts attached",
+        "Explicitly state the cancellation was due to a mechanical issue (a controllable cancellation) and request $222 reimbursement to your original payment method or via check",
+        "Keep the case/reference number Delta issues and retain copies of everything submitted"
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (transportation.gov/airconsumer) referencing Delta's controllable-cancellation commitments; you may also dispute via credit card chargeback if the cancellation constituted a service failure, or pursue small claims court for the $222.",
+      "legal_basis": [
+        "Delta Contract of Carriage (Rule 240/duty to reaccommodate and cover expenses for cancellations within the carrier's control)",
+        "Delta Customer Commitment / U.S. DOT Airline Customer Service Dashboard commitments (hotel accommodation and meal vouchers for controllable cancellations)",
+        "U.S. DOT consumer protection rules (14 CFR Part 259) — carriers must adhere to their published customer service commitments",
+        "NOTE: EU261/UK261 does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines Customer Care; mailing alternative: P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\nRe: Expense reimbursement request — Controllable cancellation of Flight 1049 (ATL–BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred as a direct result of Delta's cancellation of Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 (confirmation GKX9QP).\n\nDelta cancelled this flight due to a mechanical/maintenance issue. Under the U.S. Department of Transportation's Airline Customer Service Dashboard, a cancellation caused by a mechanical problem is a 'controllable cancellation,' and Delta has publicly committed to providing overnight hotel accommodations and meals to affected passengers. Because Delta rebooked me on a flight the following morning, I was required to stay overnight and personally paid the following:\n\n  • Hotel accommodation: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nItemized receipts are attached. As these costs arose solely from a cancellation within Delta's control, I respectfully request full reimbursement of $222.00 to my original form of payment (or by check, if preferred).\n\nPlease confirm receipt of this request and provide a case reference number. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\njane.doe@email.com\n650-555-0142",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's domestic flight (ATL→BOS) on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $222 out of pocket for an overnight hotel and meals.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta flight 1049 from Atlanta (ATL) to Boston (BOS), booked under confirmation GKX9QP for passenger Jane Doe, was cancelled because of a mechanical/maintenance issue. Because this is a mechanical problem within the airline's control (a 'controllable cancellation'), Delta rebooked Jane onto a flight the next morning. To wait overnight she incurred $182 for a hotel and $40 for meals, totaling $222. She is seeking full reimbursement of these expenses.",
+        "legal_basis": [
+          "Delta Contract of Carriage (Rule 240/duty to reaccommodate and cover expenses for cancellations within the carrier's control)",
+          "Delta Customer Commitment / U.S. DOT Airline Customer Service Dashboard commitments (hotel accommodation and meal vouchers for controllable cancellations)",
+          "U.S. DOT consumer protection rules (14 CFR Part 259) — carriers must adhere to their published customer service commitments",
+          "NOTE: EU261/UK261 does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is classified as a 'controllable cancellation' under the U.S. DOT dashboard, and Delta has publicly committed to providing (or reimbursing) overnight hotel accommodations and meals for controllable cancellations. Because Delta caused the cancellation and the expenses are modest, documented, and directly caused by the overnight delay, the claim is well-supported — provided receipts are produced.",
+        "dispute_path": {
+          "primary": "Submit a reimbursement request directly to Delta via its Comment/Complaint web form, citing its controllable-cancellation commitment",
+          "steps": [
+            "Gather the hotel receipt ($182) and meal receipts ($40) showing dates matching the overnight of March 14–15, 2026",
+            "Log in to your Delta SkyMiles/My Trips account and open confirmation GKX9QP to capture the cancellation notice and rebooking details",
+            "Submit the reimbursement request through Delta's online Comment/Complaint form (delta.com/us/en/need-help/comment-complaint) with receipts attached",
+            "Explicitly state the cancellation was due to a mechanical issue (a controllable cancellation) and request $222 reimbursement to your original payment method or via check",
+            "Keep the case/reference number Delta issues and retain copies of everything submitted"
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (transportation.gov/airconsumer) referencing Delta's controllable-cancellation commitments; you may also dispute via credit card chargeback if the cancellation constituted a service failure, or pursue small claims court for the $222."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt for $182 (March 14–15, 2026)",
+          "Meal receipts totaling $40",
+          "Delta's written cancellation notice / rebooking confirmation for flight 1049 showing the mechanical reason",
+          "Whether Delta already offered any voucher, credit, or partial reimbursement"
+        ],
+        "questions": [
+          "Do you have the hotel and meal receipts, and do the dates match the overnight of March 14, 2026?",
+          "Did Delta offer you any hotel voucher, meal voucher, or compensation at the airport that you declined or didn't receive?",
+          "How did you pay for the original ticket (credit card?), in case a chargeback becomes an option?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\nRe: Expense reimbursement request — Controllable cancellation of Flight 1049 (ATL–BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses I incurred as a direct result of Delta's cancellation of Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 (confirmation GKX9QP).\n\nDelta cancelled this flight due to a mechanical/maintenance issue. Under the U.S. Department of Transportation's Airline Customer Service Dashboard, a cancellation caused by a mechanical problem is a 'controllable cancellation,' and Delta has publicly committed to providing overnight hotel accommodations and meals to affected passengers. Because Delta rebooked me on a flight the following morning, I was required to stay overnight and personally paid the following:\n\n  • Hotel accommodation: $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nItemized receipts are attached. As these costs arose solely from a cancellation within Delta's control, I respectfully request full reimbursement of $222.00 to my original form of payment (or by check, if preferred).\n\nPlease confirm receipt of this request and provide a case reference number. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\njane.doe@email.com\n650-555-0142",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+          "method": "web_form",
+          "address": "Delta Air Lines Customer Care; mailing alternative: P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 15,
+      "status": "escalated",
+      "created_at": "2026-07-19T20:17:33.431733+00:00",
+      "updated_at": "2026-07-19T20:18:47.523766+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — hotel & meals)",
+      "summary": "Delta cancelled Jane Doe's domestic flight from Atlanta to Boston on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is squarely a 'controllable' cancellation under DOT's dashboard and Delta's published Customer Commitment, which promises overnight hotel and meal coverage. The expenses ($222) are modest, reasonable, and receipt-verifiable. Note: EU261/UK261 fixed compensation does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier, so the claim is limited to expense reimbursement under Delta's own policy and DOT commitments, not statutory cash compensation.",
+      "dispute_primary": "Direct reimbursement request to Delta via its Comment/Complaint web form (or Reimbursements portal), citing the controllable cancellation and attaching receipts",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel and $40 meals (with dates showing the overnight of March 14, 2026).",
+        "Submit a reimbursement/complaint request through Delta.com 'Comment/Complaint' form referencing confirmation GKX9QP and flight 1049.",
+        "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's Customer Commitment obligation to cover hotel and meals.",
+        "Request reimbursement of $222 to your original payment method and keep the case/reference number.",
+        "Allow Delta's stated response window (typically up to 30 days) for a reply."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (aviationconsumer@dot.gov / https://secure.dot.gov/air-travel-complaint) citing the controllable cancellation, and consider a credit card dispute if the flight or expenses were charged and the airline promised but failed to reimburse.",
+      "legal_basis": [
+        "Delta Contract of Carriage, Rule 240 (Cancellations/Delays and re-accommodation)",
+        "Delta Customer Commitment / Customer Service Plan (hotel + meal coverage for controllable cancellations)",
+        "U.S. DOT Airline Customer Service Dashboard commitments — mechanical issues are 'controllable' cancellations requiring meals and overnight hotel accommodations",
+        "14 CFR Part 259 (Enhancing Airline Passenger Protections)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/overview",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight 1049 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses caused by the cancellation of Delta Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight. This required an unplanned overnight stay, for which I paid $182 for a hotel and $40 for meals, totaling $222.\n\nA cancellation caused by a mechanical/maintenance issue is a 'controllable' cancellation under the U.S. Department of Transportation's Airline Customer Service Dashboard and under Delta's own Customer Commitment, both of which provide that Delta will cover overnight hotel accommodations and meals in these circumstances. Accordingly, I am entitled to reimbursement of these reasonable expenses.\n\nItemized receipts for the hotel ($182) and meals ($40) are attached. Please reimburse the full amount of $222 to my original payment method.\n\nI would appreciate a response within 30 days. Please contact me at jane.doe@email.com or 650-555-0142 with any questions or to confirm processing.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — hotel & meals)",
+        "summary": "Delta cancelled Jane Doe's domestic flight from Atlanta to Boston on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta flight 1049 (ATL→BOS), confirmation GKX9QP, was cancelled because of a mechanical/maintenance issue. Delta rebooked Jane Doe on the next morning's flight, requiring an unplanned overnight stay. She incurred $182 for a hotel and $40 for meals, totaling $222. Because the cancellation was caused by a mechanical problem, it is a 'controllable' cancellation under U.S. Department of Transportation classification, and Delta's own Customer Commitment obligates it to cover overnight hotel accommodations and meals in these circumstances.",
+        "legal_basis": [
+          "Delta Contract of Carriage, Rule 240 (Cancellations/Delays and re-accommodation)",
+          "Delta Customer Commitment / Customer Service Plan (hotel + meal coverage for controllable cancellations)",
+          "U.S. DOT Airline Customer Service Dashboard commitments — mechanical issues are 'controllable' cancellations requiring meals and overnight hotel accommodations",
+          "14 CFR Part 259 (Enhancing Airline Passenger Protections)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is squarely a 'controllable' cancellation under DOT's dashboard and Delta's published Customer Commitment, which promises overnight hotel and meal coverage. The expenses ($222) are modest, reasonable, and receipt-verifiable. Note: EU261/UK261 fixed compensation does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier, so the claim is limited to expense reimbursement under Delta's own policy and DOT commitments, not statutory cash compensation.",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta via its Comment/Complaint web form (or Reimbursements portal), citing the controllable cancellation and attaching receipts",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel and $40 meals (with dates showing the overnight of March 14, 2026).",
+            "Submit a reimbursement/complaint request through Delta.com 'Comment/Complaint' form referencing confirmation GKX9QP and flight 1049.",
+            "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's Customer Commitment obligation to cover hotel and meals.",
+            "Request reimbursement of $222 to your original payment method and keep the case/reference number.",
+            "Allow Delta's stated response window (typically up to 30 days) for a reply."
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (aviationconsumer@dot.gov / https://secure.dot.gov/air-travel-complaint) citing the controllable cancellation, and consider a credit card dispute if the flight or expenses were charged and the airline promised but failed to reimburse."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt showing $182 for the night of March 14, 2026",
+          "Meal receipt(s) totaling $40",
+          "Any written cancellation notice or email from Delta confirming the mechanical-issue reason",
+          "Rebooking confirmation for the next-morning flight"
+        ],
+        "questions": [
+          "Do you have receipts for the hotel and meals, and does the cancellation notice from Delta state the reason (mechanical)?",
+          "Did Delta offer any voucher, travel credit, or partial reimbursement at the time?",
+          "What payment method did you use for the hotel and meals?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight 1049 (ATL→BOS), March 14, 2026\nConfirmation: GKX9QP\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of $222 in out-of-pocket expenses caused by the cancellation of Delta Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on the following morning's flight. This required an unplanned overnight stay, for which I paid $182 for a hotel and $40 for meals, totaling $222.\n\nA cancellation caused by a mechanical/maintenance issue is a 'controllable' cancellation under the U.S. Department of Transportation's Airline Customer Service Dashboard and under Delta's own Customer Commitment, both of which provide that Delta will cover overnight hotel accommodations and meals in these circumstances. Accordingly, I am entitled to reimbursement of these reasonable expenses.\n\nItemized receipts for the hotel ($182) and meals ($40) are attached. Please reimburse the full amount of $222 to my original payment method.\n\nI would appreciate a response within 30 days. Please contact me at jane.doe@email.com or 650-555-0142 with any questions or to confirm processing.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care (Comment/Complaint)",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/overview"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      }
+    },
+    {
+      "id": 16,
+      "status": "escalated",
+      "created_at": "2026-07-19T20:20:18.513553+00:00",
+      "updated_at": "2026-07-19T20:21:21.929066+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — US domestic flight)",
+      "summary": "Delta cancelled Jane Doe's domestic flight ATL→BOS on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $222 in overnight hotel and meal costs.",
+      "amount_str": "$222",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical issue is a 'controllable' cancellation under DOT rules, and Delta has publicly committed on the DOT dashboard to provide hotel and meals for controllable overnight disruptions. Because Delta did not provide these directly, Jane has a strong basis to recover her documented out-of-pocket costs. Note: this is a US domestic flight (ATL→BOS on a US carrier), so EU261/UK261 fixed statutory compensation does NOT apply — this is an expense-reimbursement claim only, not a statutory cash-compensation claim.",
+      "dispute_primary": "File a reimbursement request directly with Delta Customer Care, citing its controllable-cancellation commitment and attaching receipts.",
+      "dispute_steps": [
+        "Gather receipts for the $182 hotel and $40 in meals (itemized, showing date March 14–15, 2026).",
+        "Submit a written reimbursement request through Delta's Comment/Complaint form at delta.com, referencing confirmation GKX9QP and flight 1049.",
+        "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's DOT dashboard commitment to cover hotel and meals.",
+        "Request reimbursement by check or original form of payment, and keep a copy of the submission and any case/reference number."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. DOT Office of Aviation Consumer Protection at transportation.gov/airconsumer. You may also dispute via credit card chargeback if the expenses were charged and Delta had a duty to cover them, and consider small claims court for $222 as a last resort.",
+      "legal_basis": [
+        "Delta Contract of Carriage — Domestic, Rule 240 (Cancellations/Delays/Rebooking) and provisions for controllable irregular operations",
+        "DOT Airline Customer Service Dashboard commitments — Delta's binding commitment to provide complimentary hotel accommodations and meals/meal vouchers for controllable cancellations causing an overnight stay",
+        "U.S. DOT classification of mechanical/maintenance issues as 'controllable' cancellations (14 CFR Part 259 / DOT consumer protection framework)"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL1049, ATL→BOS, March 14, 2026 — Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta's cancellation of Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on a flight the following morning. Because the disruption forced an unplanned overnight stay, I had to pay $182 for a hotel and $40 for meals — a total of $222.\n\nA mechanical/maintenance issue is classified by the U.S. Department of Transportation as a 'controllable' cancellation. Under Delta's own customer service commitments published on the DOT Airline Customer Service Dashboard, Delta commits to providing complimentary hotel accommodations and meals to passengers affected by controllable cancellations that require an overnight stay. As Delta did not provide these, I am requesting full reimbursement of my out-of-pocket costs.\n\nItemized receipts are attached:\n  • Hotel: $182\n  • Meals: $40\n  • Total: $222\n\nPlease reimburse this amount to my original form of payment or by check. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — US domestic flight)",
+        "summary": "Delta cancelled Jane Doe's domestic flight ATL→BOS on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing her to pay $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222",
+        "what_happened": "On March 14, 2026, Delta flight 1049 from Atlanta (ATL) to Boston (BOS), booked under confirmation GKX9QP for passenger Jane Doe, was cancelled due to a mechanical issue. Delta rebooked her on a flight the next morning, requiring an unplanned overnight stay. As a result she incurred $182 for a hotel and $40 for meals, totaling $222. A mechanical issue is classified by the U.S. Department of Transportation as a 'controllable' cancellation (within the airline's control), which triggers Delta's published commitment to provide meals and overnight hotel accommodations. Jane is seeking reimbursement of these out-of-pocket expenses.",
+        "legal_basis": [
+          "Delta Contract of Carriage — Domestic, Rule 240 (Cancellations/Delays/Rebooking) and provisions for controllable irregular operations",
+          "DOT Airline Customer Service Dashboard commitments — Delta's binding commitment to provide complimentary hotel accommodations and meals/meal vouchers for controllable cancellations causing an overnight stay",
+          "U.S. DOT classification of mechanical/maintenance issues as 'controllable' cancellations (14 CFR Part 259 / DOT consumer protection framework)"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical issue is a 'controllable' cancellation under DOT rules, and Delta has publicly committed on the DOT dashboard to provide hotel and meals for controllable overnight disruptions. Because Delta did not provide these directly, Jane has a strong basis to recover her documented out-of-pocket costs. Note: this is a US domestic flight (ATL→BOS on a US carrier), so EU261/UK261 fixed statutory compensation does NOT apply — this is an expense-reimbursement claim only, not a statutory cash-compensation claim.",
+        "dispute_path": {
+          "primary": "File a reimbursement request directly with Delta Customer Care, citing its controllable-cancellation commitment and attaching receipts.",
+          "steps": [
+            "Gather receipts for the $182 hotel and $40 in meals (itemized, showing date March 14–15, 2026).",
+            "Submit a written reimbursement request through Delta's Comment/Complaint form at delta.com, referencing confirmation GKX9QP and flight 1049.",
+            "State clearly that the cancellation was due to a mechanical issue (controllable) and cite Delta's DOT dashboard commitment to cover hotel and meals.",
+            "Request reimbursement by check or original form of payment, and keep a copy of the submission and any case/reference number."
+          ],
+          "escalation": "If Delta denies or ignores the claim, file a complaint with the U.S. DOT Office of Aviation Consumer Protection at transportation.gov/airconsumer. You may also dispute via credit card chargeback if the expenses were charged and Delta had a duty to cover them, and consider small claims court for $222 as a last resort."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt ($182) showing guest name and dates",
+          "Meal receipts totaling $40",
+          "Cancellation notice / rebooking confirmation from Delta stating the mechanical reason (email or app screenshot)"
+        ],
+        "questions": [
+          "Did Delta offer you a hotel/meal voucher at the airport that you declined, or did they provide nothing?",
+          "How did you pay for the hotel and meals (credit card, cash), and do you have the receipts?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Flight DL1049, ATL→BOS, March 14, 2026 — Confirmation GKX9QP\n\nDear Delta Customer Care,\n\nMy name is Jane Doe (confirmation number GKX9QP). I am writing to request reimbursement of $222 in overnight expenses I incurred as a direct result of Delta's cancellation of Flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026.\n\nDelta cancelled this flight due to a mechanical issue and rebooked me on a flight the following morning. Because the disruption forced an unplanned overnight stay, I had to pay $182 for a hotel and $40 for meals — a total of $222.\n\nA mechanical/maintenance issue is classified by the U.S. Department of Transportation as a 'controllable' cancellation. Under Delta's own customer service commitments published on the DOT Airline Customer Service Dashboard, Delta commits to providing complimentary hotel accommodations and meals to passengers affected by controllable cancellations that require an overnight stay. As Delta did not provide these, I am requesting full reimbursement of my out-of-pocket costs.\n\nItemized receipts are attached:\n  • Hotel: $182\n  • Meals: $40\n  • Total: $222\n\nPlease reimburse this amount to my original form of payment or by check. I can be reached at jane.doe@email.com or 650-555-0142.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Delta Air Lines, Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      }
+    },
+    {
+      "id": 17,
+      "status": "escalated",
+      "created_at": "2026-07-19T20:25:15.087910+00:00",
+      "updated_at": "2026-07-19T20:26:19.986639+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's ATL→BOS flight 1049 on March 14, 2026 for a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs she wants reimbursed.",
+      "amount_str": "$222.00 ($182 hotel + $40 meals)",
+      "amount_cents": 22200,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation — it is NOT an extraordinary circumstance and is squarely within Delta's control. Under DOT's Customer Service Dashboard commitments and Delta's own Customer Commitment, Delta pledges to provide (or reimburse) hotel accommodations and meals when a controllable cancellation forces an overnight stay and same-day rebooking is unavailable. The claim is a modest, well-documented amount directly caused by the airline. Strength is capped short of automatic because these are Delta policy/DOT-commitment obligations rather than a statutory fixed payout, and receipts still need to be attached.",
+      "dispute_primary": "Direct reimbursement request to Delta via its official Comment/Complaint web form (or Reimbursement request), citing the controllable-cancellation commitment",
+      "dispute_steps": [
+        "Gather the hotel and meal receipts totaling $222 and a copy of the cancellation/rebooking notice for flight 1049.",
+        "Submit a reimbursement request through Delta's online complaint/feedback form referencing confirmation GKX9QP and flight 1049 on 3/14/2026.",
+        "Explicitly state the cancellation was due to a mechanical issue (a controllable cancellation) and request full reimbursement of $222 for hotel and meals.",
+        "Attach receipts and request reimbursement by check or original form of payment; keep a copy of the submission and any case number.",
+        "Allow Delta's stated response window (typically ~30 days) and follow up in writing if no response."
+      ],
+      "dispute_escalation": "If Delta denies or ignores the request, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (secure.dot.gov/air-travel-complaint), referencing the controllable-cancellation commitment. You may also dispute the airfare or pursue a credit-card chargeback if applicable, and consider small claims court for the $222.",
+      "legal_basis": [
+        "U.S. DOT rules on 'controllable' cancellations (mechanical/maintenance issues are within the airline's control)",
+        "DOT Airline Customer Service Dashboard commitments (hotel + meals + ground transport for controllable overnight delays)",
+        "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations and Delays) and Delta Customer Commitment",
+        "Note: EU261/UK261 does NOT apply — the flight was wholly domestic within the U.S. on a U.S. carrier, so no fixed statutory compensation is owed"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care / Comment & Complaint",
+      "submit_method": "web_form",
+      "submit_address": "Delta Air Lines Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980 (mail alternative)",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/comment-complaint",
+      "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight 1049 (ATL–BOS), March 14, 2026\nPassenger: Jane Doe\nConfirmation: GKX9QP\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nOn March 14, 2026, Delta cancelled Flight 1049 from Atlanta (ATL) to Boston (BOS) due to a mechanical issue. Because no same-day rebooking was available, Delta rebooked me on the following morning's flight, forcing me into an unplanned overnight stay.\n\nA cancellation caused by a mechanical or maintenance problem is a 'controllable' cancellation under U.S. Department of Transportation rules and Delta's own Customer Commitment. Delta has publicly committed — and represents on the DOT Airline Customer Service Dashboard — that when a controllable cancellation requires an overnight stay and same-day rebooking is not possible, it will provide or reimburse hotel accommodations and meals.\n\nAs a direct result of this cancellation, I incurred the following out-of-pocket expenses:\n  • Hotel (night of 3/14/2026): $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nReceipts are attached. I request full reimbursement of $222.00, payable by check or to my original form of payment.\n\nPlease confirm receipt of this request and provide a case number. I can be reached at jane.doe@email.com or 650-555-0142. I look forward to your prompt response within your stated 30-day window.\n\nSincerely,\nJane Doe",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's ATL→BOS flight 1049 on March 14, 2026 for a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs she wants reimbursed.",
+        "amount_at_stake": "$222.00 ($182 hotel + $40 meals)",
+        "what_happened": "On March 14, 2026, Delta Air Lines cancelled flight 1049 from Atlanta (ATL) to Boston (BOS) (confirmation GKX9QP) citing a mechanical issue. Delta could only rebook the passenger, Jane Doe, on a flight the following morning. As a result she incurred an unplanned overnight stay costing $182 for a hotel and $40 for meals. Because the cancellation was caused by a mechanical/maintenance problem, it is a 'controllable' cancellation under U.S. Department of Transportation rules and Delta's own Customer Commitment, which obligate the airline to cover overnight accommodations and meals when it cannot rebook the passenger the same day.",
+        "legal_basis": [
+          "U.S. DOT rules on 'controllable' cancellations (mechanical/maintenance issues are within the airline's control)",
+          "DOT Airline Customer Service Dashboard commitments (hotel + meals + ground transport for controllable overnight delays)",
+          "Delta Air Lines Contract of Carriage, Rule 240 (Cancellations and Delays) and Delta Customer Commitment",
+          "Note: EU261/UK261 does NOT apply — the flight was wholly domestic within the U.S. on a U.S. carrier, so no fixed statutory compensation is owed"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation — it is NOT an extraordinary circumstance and is squarely within Delta's control. Under DOT's Customer Service Dashboard commitments and Delta's own Customer Commitment, Delta pledges to provide (or reimburse) hotel accommodations and meals when a controllable cancellation forces an overnight stay and same-day rebooking is unavailable. The claim is a modest, well-documented amount directly caused by the airline. Strength is capped short of automatic because these are Delta policy/DOT-commitment obligations rather than a statutory fixed payout, and receipts still need to be attached.",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta via its official Comment/Complaint web form (or Reimbursement request), citing the controllable-cancellation commitment",
+          "steps": [
+            "Gather the hotel and meal receipts totaling $222 and a copy of the cancellation/rebooking notice for flight 1049.",
+            "Submit a reimbursement request through Delta's online complaint/feedback form referencing confirmation GKX9QP and flight 1049 on 3/14/2026.",
+            "Explicitly state the cancellation was due to a mechanical issue (a controllable cancellation) and request full reimbursement of $222 for hotel and meals.",
+            "Attach receipts and request reimbursement by check or original form of payment; keep a copy of the submission and any case number.",
+            "Allow Delta's stated response window (typically ~30 days) and follow up in writing if no response."
+          ],
+          "escalation": "If Delta denies or ignores the request, file a complaint with the U.S. Department of Transportation Office of Aviation Consumer Protection (secure.dot.gov/air-travel-complaint), referencing the controllable-cancellation commitment. You may also dispute the airfare or pursue a credit-card chargeback if applicable, and consider small claims court for the $222."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt showing $182 charge and date (night of 3/14/2026)",
+          "Meal receipt(s) totaling $40",
+          "Delta's written cancellation/rebooking notice or email confirming the mechanical cause",
+          "Whether Delta already offered any voucher, credit, or partial reimbursement"
+        ],
+        "questions": [
+          "Do you have itemized receipts for the $182 hotel and $40 meals?",
+          "Did Delta provide anything (meal vouchers, hotel, travel credit) at the time, or make any offer since?",
+          "Do you have Delta's written notice stating the cancellation reason was mechanical?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\n\nRe: Reimbursement request — Controllable cancellation of Flight 1049 (ATL–BOS), March 14, 2026\nPassenger: Jane Doe\nConfirmation: GKX9QP\nEmail: jane.doe@email.com | Phone: 650-555-0142\n\nDear Delta Customer Care,\n\nOn March 14, 2026, Delta cancelled Flight 1049 from Atlanta (ATL) to Boston (BOS) due to a mechanical issue. Because no same-day rebooking was available, Delta rebooked me on the following morning's flight, forcing me into an unplanned overnight stay.\n\nA cancellation caused by a mechanical or maintenance problem is a 'controllable' cancellation under U.S. Department of Transportation rules and Delta's own Customer Commitment. Delta has publicly committed — and represents on the DOT Airline Customer Service Dashboard — that when a controllable cancellation requires an overnight stay and same-day rebooking is not possible, it will provide or reimburse hotel accommodations and meals.\n\nAs a direct result of this cancellation, I incurred the following out-of-pocket expenses:\n  • Hotel (night of 3/14/2026): $182.00\n  • Meals: $40.00\n  • Total: $222.00\n\nReceipts are attached. I request full reimbursement of $222.00, payable by check or to my original form of payment.\n\nPlease confirm receipt of this request and provide a case number. I can be reached at jane.doe@email.com or 650-555-0142. I look forward to your prompt response within your stated 30-day window.\n\nSincerely,\nJane Doe",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care / Comment & Complaint",
+          "method": "web_form",
+          "address": "Delta Air Lines Customer Care, P.O. Box 20980, Dept. 980, Atlanta, GA 30320-2980 (mail alternative)",
+          "form_url": "https://www.delta.com/us/en/need-help/comment-complaint"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      }
+    },
+    {
+      "id": 18,
+      "status": "approved",
+      "created_at": "2026-07-19T20:59:17.136364+00:00",
+      "updated_at": "2026-07-19T21:02:12.555627+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+      "summary": "Delta cancelled Jane Doe's ATL→BOS flight 1049 on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+      "amount_str": "$222 ($182 hotel + $40 meals)",
+      "amount_cents": 2221824000,
+      "strength": "Strong",
+      "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation under the U.S. DOT dashboard, and Delta has publicly committed to cover overnight hotel, ground transport, and meals for controllable overnight cancellations. The requested amounts are modest and reasonable. The only weakness is that reimbursement of care expenses is a policy/contract commitment rather than a fixed statutory entitlement, so approval depends on Delta honoring its commitment and receipts being provided.",
+      "dispute_primary": "Direct reimbursement request to Delta Customer Care, citing its Customer Commitment for controllable cancellations",
+      "dispute_steps": [
+        "Gather itemized receipts for the $182 hotel stay and $40 meals (dated March 14–15, 2026).",
+        "Submit a reimbursement request through Delta's 'Comment/Complaint' web form at delta.com/complaint (or Message Us in the Fly Delta app), attaching receipts and referencing confirmation GKX9QP and flight 1049.",
+        "State clearly that the cancellation was due to a mechanical issue (a controllable reason) and request reimbursement of overnight hotel and meal expenses per Delta's Customer Commitment.",
+        "Keep a copy of the submission and note the case/reference number Delta provides."
+      ],
+      "dispute_escalation": "If Delta denies or does not respond within ~30 days, file a complaint with the U.S. Department of Transingation Office of Aviation Consumer Protection (transportation.gov/airconsumer) referencing Delta's dashboard commitment; you may also dispute the charges via credit card chargeback if applicable and escalate to Delta's executive customer care.",
+      "legal_basis": [
+        "Delta Contract of Carriage (Rule 240 — Cancellations and Delays) covering care during controllable disruptions",
+        "Delta Customer Commitment (overnight hotel accommodations, ground transportation, and meal vouchers/reimbursement for controllable cancellations)",
+        "U.S. DOT Airline Customer Service Dashboard commitments (mechanical/maintenance cancellations are 'controllable' — carrier committed to provide meals and overnight hotel)",
+        "NOTE: EU261/UK261 does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier; there is no U.S. statutory fixed compensation, only Delta's own commitments to cover care expenses"
+      ],
+      "submit_name": "Delta Air Lines — Customer Care",
+      "submit_method": "web_form",
+      "submit_address": "Fly Delta app 'Message Us' or Delta.com Comment/Complaint form; mailing address: Delta Air Lines, Inc., Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+      "submit_form_url": "https://www.delta.com/us/en/need-help/overview",
+      "draft_letter": "To: Delta Air Lines Customer Care\nRe: Reimbursement request — Flight 1049 cancellation, Confirmation GKX9QP\n\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\nFlight: DL1049, Atlanta (ATL) → Boston (BOS)\nDate: March 14, 2026\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of expenses I incurred when Delta flight 1049 from Atlanta to Boston was cancelled on March 14, 2026. Delta advised the cancellation was due to a mechanical issue with the aircraft, and I was rebooked onto a flight the following morning.\n\nBecause this was an overnight disruption, I had to pay $182 for a hotel and $40 for meals, for a total of $222. A mechanical/maintenance cancellation is a 'controllable' disruption under the U.S. DOT Airline Customer Service Dashboard, and Delta's Customer Commitment provides for overnight hotel accommodations and meals in these circumstances.\n\nI respectfully request reimbursement of $222. Itemized receipts are attached. Please process this to my original form of payment or by check, and confirm receipt of this request.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\nConfirmation: GKX9QP",
+      "raw_analysis": {
+        "claim_type": "Airline expense reimbursement (controllable cancellation — duty of care)",
+        "summary": "Delta cancelled Jane Doe's ATL→BOS flight 1049 on March 14, 2026 due to a mechanical issue and rebooked her the next morning, forcing $222 in overnight hotel and meal costs.",
+        "amount_at_stake": "$222 ($182 hotel + $40 meals)",
+        "what_happened": "On March 14, 2026, Delta Air Lines cancelled flight 1049 from Atlanta (ATL) to Boston (BOS) because of a mechanical issue with the aircraft. The passenger, Jane Doe (confirmation GKX9QP), was rebooked onto a flight the following morning. Because the disruption was overnight, she incurred $182 for a hotel and $40 for meals, totaling $222. She is seeking reimbursement of these out-of-pocket expenses.",
+        "legal_basis": [
+          "Delta Contract of Carriage (Rule 240 — Cancellations and Delays) covering care during controllable disruptions",
+          "Delta Customer Commitment (overnight hotel accommodations, ground transportation, and meal vouchers/reimbursement for controllable cancellations)",
+          "U.S. DOT Airline Customer Service Dashboard commitments (mechanical/maintenance cancellations are 'controllable' — carrier committed to provide meals and overnight hotel)",
+          "NOTE: EU261/UK261 does NOT apply — this is a wholly domestic U.S. flight on a U.S. carrier; there is no U.S. statutory fixed compensation, only Delta's own commitments to cover care expenses"
+        ],
+        "strength": "Strong",
+        "strength_reason": "A mechanical/maintenance issue is a 'controllable' cancellation under the U.S. DOT dashboard, and Delta has publicly committed to cover overnight hotel, ground transport, and meals for controllable overnight cancellations. The requested amounts are modest and reasonable. The only weakness is that reimbursement of care expenses is a policy/contract commitment rather than a fixed statutory entitlement, so approval depends on Delta honoring its commitment and receipts being provided.",
+        "dispute_path": {
+          "primary": "Direct reimbursement request to Delta Customer Care, citing its Customer Commitment for controllable cancellations",
+          "steps": [
+            "Gather itemized receipts for the $182 hotel stay and $40 meals (dated March 14–15, 2026).",
+            "Submit a reimbursement request through Delta's 'Comment/Complaint' web form at delta.com/complaint (or Message Us in the Fly Delta app), attaching receipts and referencing confirmation GKX9QP and flight 1049.",
+            "State clearly that the cancellation was due to a mechanical issue (a controllable reason) and request reimbursement of overnight hotel and meal expenses per Delta's Customer Commitment.",
+            "Keep a copy of the submission and note the case/reference number Delta provides."
+          ],
+          "escalation": "If Delta denies or does not respond within ~30 days, file a complaint with the U.S. Department of Transingation Office of Aviation Consumer Protection (transportation.gov/airconsumer) referencing Delta's dashboard commitment; you may also dispute the charges via credit card chargeback if applicable and escalate to Delta's executive customer care."
+        },
+        "missing_evidence": [
+          "Itemized hotel receipt showing $182 charge and dates",
+          "Meal receipts totaling $40",
+          "Delta's cancellation notice/email stating the mechanical reason (helpful to confirm 'controllable' classification)"
+        ],
+        "questions": [
+          "Did Delta offer you a hotel/meal voucher at the airport that you declined, or were none offered?",
+          "Do you have itemized receipts for the hotel and meals to attach?",
+          "Did Delta state the mechanical reason in writing (email/app notification)?"
+        ],
+        "draft_letter": "To: Delta Air Lines Customer Care\nRe: Reimbursement request — Flight 1049 cancellation, Confirmation GKX9QP\n\nPassenger: Jane Doe\nEmail: jane.doe@email.com | Phone: 650-555-0142\nFlight: DL1049, Atlanta (ATL) → Boston (BOS)\nDate: March 14, 2026\n\nDear Delta Customer Care,\n\nI am writing to request reimbursement of expenses I incurred when Delta flight 1049 from Atlanta to Boston was cancelled on March 14, 2026. Delta advised the cancellation was due to a mechanical issue with the aircraft, and I was rebooked onto a flight the following morning.\n\nBecause this was an overnight disruption, I had to pay $182 for a hotel and $40 for meals, for a total of $222. A mechanical/maintenance cancellation is a 'controllable' disruption under the U.S. DOT Airline Customer Service Dashboard, and Delta's Customer Commitment provides for overnight hotel accommodations and meals in these circumstances.\n\nI respectfully request reimbursement of $222. Itemized receipts are attached. Please process this to my original form of payment or by check, and confirm receipt of this request.\n\nThank you for your prompt attention.\n\nSincerely,\nJane Doe\nConfirmation: GKX9QP",
+        "submit_to": {
+          "name": "Delta Air Lines — Customer Care",
+          "method": "web_form",
+          "address": "Fly Delta app 'Message Us' or Delta.com Comment/Complaint form; mailing address: Delta Air Lines, Inc., Customer Care, P.O. Box 20980, Department 980, Atlanta, GA 30320-2980",
+          "form_url": "https://www.delta.com/us/en/need-help/overview"
+        },
+        "ready_to_submit": false
+      },
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null,
+      "history": {
+        "user_text": "Document (Pasted content):\nDelta cancelled my flight 1049 from Atlanta (ATL) to Boston (BOS) on March 14, 2026 due to a mechanical issue. My name is Jane Doe, confirmation GKX9QP, and they rebooked me the next morning. I had to pay $182 for a hotel and $40 for meals\r\n  overnight. Reimburse me for these expenses. My email is jane.doe@email.com and phone 650-555-0142.\n\nAnalyze this claim and respond ONLY with valid JSON. No markdown, no preamble."
+      },
+      "autofill_mode": "real"
+    },
+    {
+      "id": 19,
+      "status": "error",
+      "created_at": "2026-07-20T07:30:51.774644+00:00",
+      "updated_at": "2026-07-20T07:30:52.799788+00:00",
+      "document_names": [
+        "pasted_text"
+      ],
+      "ocr_used": false,
+      "ocr_pages": 0,
+      "claim_type": null,
+      "summary": null,
+      "amount_str": null,
+      "amount_cents": null,
+      "strength": null,
+      "strength_reason": null,
+      "dispute_primary": null,
+      "dispute_steps": [],
+      "dispute_escalation": null,
+      "legal_basis": [],
+      "submit_name": null,
+      "submit_method": null,
+      "submit_address": null,
+      "submit_form_url": null,
+      "draft_letter": null,
+      "raw_analysis": null,
+      "submission_reference": null,
+      "resolved_at": null,
+      "recovered_cents": null,
+      "resolution_note": null
+    }
+  ]
+}
